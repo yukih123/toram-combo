@@ -40,14 +40,15 @@
 </template>
 
 <script>
-import skill_categories from '../assets/skills.json'
+import skill_categories from '../assets/skills.min.json'
+import effects from '../assets/effects.min.json'
 
 export default {
     name: 'Calc',
     data() {
         return {
             skill_categories: skill_categories,
-            effects: [ "なし", "連撃", "心眼", "充填", "迅速", "強打", "執念", "〆" ],
+            effects: effects,
             point: 20,
             init_row: {
                 skill_number: null,
@@ -84,17 +85,17 @@ export default {
                 // 連撃 後で考える
 
                 // 充填ならマイナス
-                if (row.effect == 3) {
+                if (row.effect == 'fill') {
                     return sum - mp;
                 }
 
                 // 強打で最後なら2倍
-                if (row.effect == 5 && index == last_index) {
+                if (row.effect == 'strike' && index == last_index) {
                     return sum + mp * 2;
                 }
 
                 // 〆ならなし
-                if (row.effect == 7) {
+                if (row.effect == 'cancel') {
                     return sum;
                 }
 
