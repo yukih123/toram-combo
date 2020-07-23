@@ -1,0 +1,54 @@
+[
+    {
+        "name": "ブレードスキル",
+        "skills": [
+            {  "name" : "ハードヒット",  "mp" : "100",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "アステュート",  "mp" : "200",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "アクセルブレード",  "mp" : "200",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "トリガースラッシュ(〜Lv5)",  "mp" : "300",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "トリガースラッシュ(Lv6〜)",  "mp" : "200",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "スパイラルエアー",  "mp" : "300",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "ファストアタック",  "mp" : "300",  "can_start" : "1",  "halve_next" : "1"},
+            {  "name" : "ランページ",  "mp" : "500",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "ソードテンペスト",  "mp" : "400",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "ウォークライ",  "mp" : "300",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "メテオブレイカー",  "mp" : "600",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "バスターブレード",  "mp" : "300",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "バーサーク",  "mp" : "500",  "can_start" : "1",  "halve_next" : ""}
+        ]
+    },
+    {
+        "name": "シュートスキル",
+        "skills": [
+            {  "name" : "パワーシュート",  "mp" : "100",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "ワンホイール",  "mp" : "200",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "メーバショット",  "mp" : "100",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "ハイドアタック",  "mp" : "400",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "アローレイン",  "mp" : "300",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "パライズショット",  "mp" : "300",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "デストルクショット",  "mp" : "200",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "スナイピング",  "mp" : "400",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "スモークダスト",  "mp" : "500",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "クロスファイア",  "mp" : "400",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "アームブレイク",  "mp" : "700",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "デコイシューター",  "mp" : "400",  "can_start" : "1",  "halve_next" : ""}
+        ]
+    },
+    {
+        "name": "マジックスキル",
+        "skills": [
+            {  "name" : "術式/アロー",  "mp" : "100",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "術式/ジャベリン",  "mp" : "200",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "術式/ウォール",  "mp" : "200",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "チャージング",  "mp" : "0",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "術式/ランサー",  "mp" : "300",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "術式/ブラスト",  "mp" : "300",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "術式/イーゲル",  "mp" : "300",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "術式/インパクト",  "mp" : "200",  "can_start" : "1",  "halve_next" : "1"},
+            {  "name" : "術式/ストーム",  "mp" : "400",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "術式/フィナウ",  "mp" : "1600",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "術式/バースト",  "mp" : "500",  "can_start" : "1",  "halve_next" : ""},
+            {  "name" : "マキシマイザー",  "mp" : "300",  "can_start" : "1",  "halve_next" : ""}
+        ]
+    }
+]
