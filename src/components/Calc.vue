@@ -47,13 +47,14 @@ export default {
     data() {
         return {
             skill_categories: skill_categories,
-            effects: [ "なし", "連撃", "心眼", "充填", "迅速", "強打", "執念" ],
+            effects: [ "なし", "連撃", "心眼", "充填", "迅速", "強打", "執念", "〆" ],
             point: 20,
             init_row: {
                 skill_number: null,
                 category_index: null,
                 skill_index: null,
                 mp: null,
+                halve_next: null,
                 effect: null,
             },
             rows: [],
@@ -64,11 +65,40 @@ export default {
     },
     computed: {
         result() {
-            return this.rows.reduce((sum, row) => {
+            return this.rows.reduce((sum, row, index, rows) => {
                 if (row.mp == null) {
                     return sum;
                 }
-                return sum + row.mp;
+
+                let mp = row.mp;
+                let last_index = rows.length - 1;
+                if (rows[last_index].skill_number == null) {
+                    last_index--;
+                }
+
+                // 前が半減スキルなら半減する
+                if (index != 0 && rows[index - 1].halve_next) {
+                    mp = Math.ceil(mp / 10 / 2) * 10;
+                }
+
+                // 連撃 後で考える
+
+                // 充填ならマイナス
+                if (row.effect == 3) {
+                    return sum - mp;
+                }
+
+                // 強打で最後なら2倍
+                if (row.effect == 5 && index == last_index) {
+                    return sum + mp * 2;
+                }
+
+                // 〆ならなし
+                if (row.effect == 7) {
+                    return sum;
+                }
+
+                return sum + mp;
             }, 0);
         },
     },
@@ -86,6 +116,9 @@ export default {
             row.mp = this.skill_categories[row.category_index]
                          .skills[row.skill_index]
                          .mp;
+            row.halve_next = this.skill_categories[row.category_index]
+                         .skills[row.skill_index]
+                         .halve_next;
         },
         addRow() {
             if (this.rows[this.rows.length - 1].skill_number != null) {
