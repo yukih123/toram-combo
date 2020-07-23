@@ -67,7 +67,7 @@ export default {
         },
         deleteRow(row_index) {
             this.rows.splice(row_index, 1)
-            if (row_index == 0) {
+            if (row_index == 0 && this.rows.length == 0) {
                 this.rows.push(Object.assign({}, this.init_row))
             }
         },
