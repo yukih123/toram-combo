@@ -1,42 +1,38 @@
 <template>
     <div>
         <h1>コンボMP計算</h1>
-        <ul>
-            <li v-for="(row, key) in rows" :key="key">
-                <el-select v-model="row.category" placeholder="カテゴリーを選択">
-                    <el-option
-                        v-for="(category, key) in skill_categories"
-                        :key="key"
-                        :label="key + ' ' +  category.name"
-                        :value="key">
-                    </el-option>
+        <el-row v-for="(row, row_index) in rows" :key="row_index" :gutter="10">
+            <el-col :span="16">
+                <el-select placeholder="スキルを選択" v-model="row.skill_number" @change="addRow()">
+                    <el-option-group
+                        v-for="(category, category_index) in skill_categories"
+                        :key="category_index"
+                        :label="category.name">
+                        <el-option
+                            v-for="(skill, skill_index) in category.skills"
+                            :key="skill_index"
+                            :label="category_index + '-' + skill_index + ' ' + skill.name + ' ' + skill.mp"
+                            :value="category_index + '-' + skill_index">
+                        </el-option>
+                    </el-option-group>
                 </el-select>
+            </el-col>
+            <el-col :span="6">
                 <el-select
-                    v-if="row.category != null"
-                    v-model="row.mp"
-                    placeholder="スキルを選択"
-                    @change="addRow()">
-                    <el-option
-                        v-for="(skill, key) in skill_categories[row.category].skills"
-                        :key="key"
-                        :label="key + ' ' +  skill.name + ' ' + skill.mp"
-                        :value="key">
-                    </el-option>
-                </el-select>
-                <el-select
-                    v-if="row.mp != null"
                     v-model="row.effect"
                     placeholder="特殊効果を選択">
                     <el-option
                         v-for="(effect, key) in effects"
                         :key="key"
-                        :label="key + ' ' +  effect"
+                        :label="effect"
                         :value="key">
                     </el-option>
                 </el-select>
-                <i v-if="row.mp != null" class="el-icon-delete" @click="deleteRow(key)"></i>
-            </li>
-        </ul>
+            </el-col>
+            <el-col :span="2">
+                <i v-if="row.skill_number != null" class="el-icon-delete" @click="deleteRow(row_index)"></i>
+            </el-col>
+        </el-row>
     </div>
 </template>
 
@@ -53,7 +49,7 @@ export default {
             ],
             point: 20,
             init_row: {
-                category: null,
+                skill_number: null,
                 mp: null,
                 effect: null,
             },
@@ -65,13 +61,13 @@ export default {
     },
     methods: {
         addRow() {
-            if (this.rows[this.rows.length - 1].mp != null) {
+            if (this.rows[this.rows.length - 1].skill_number != null) {
                 this.rows.push(Object.assign({}, this.init_row))
             }
         },
-        deleteRow(key) {
-            this.rows.splice(key, 1)
-            if (key == 0) {
+        deleteRow(row_index) {
+            this.rows.splice(row_index, 1)
+            if (row_index == 0) {
                 this.rows.push(Object.assign({}, this.init_row))
             }
         },
@@ -80,4 +76,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    .el-select {
+        width: 100%
+    }
 </style>
