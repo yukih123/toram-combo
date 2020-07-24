@@ -98,48 +98,69 @@ export default {
     },
     computed: {
         result() {
-            let sum = this.rows.reduce((sum, row, index, rows) => {
-                if (row.skill.mp == null) {
-                    return sum;
+            let sum = 0;
+            let filled_mp = 0;
+            let last_index = this.rows.length - 1;
+            if (last_index < 0) {
+                last_index = 0;
+            } else if (last_index != 0 && this.rows[last_index].skill.name == null) {
+                last_index--;
+            }
+
+            for (const [index, row] of this.rows.entries()) {
+                let mp = row.skill.mp;
+                if (mp == null) {
+                    break;
                 }
 
-                let mp = row.skill.mp;
-                let last_index = rows.length - 1;
-                if (rows[last_index].skill_number == null) {
-                    last_index--;
+                // 〆と執念ならなし
+                if (row.effect == 'cancel' || row.effect == 'obsess') {
+                    continue;
+                }
+
+                // 充填なら0
+                if (row.effect == 'fill') {
+                    filled_mp += mp;
+                    continue;
                 }
 
                 // 前が半減スキルなら半減する
-                if (index != 0 && rows[index - 1].skill.halve_next) {
+                if (index != 0 && this.rows[index - 1].skill.halve_next) {
                     mp = Math.ceil(mp / 10 / 2) * 10;
                 }
 
                 // 連撃なら起点から数えてマイナスされる
                 if (row.effect == 'continue') {
                     mp = mp - index * 100;
-                    return (mp < 0) ? sum : sum + mp;
-                }
-
-                // 充填ならマイナス
-                if (row.effect == 'fill') {
-                    return sum - mp;
+                    if (mp < 0) {
+                        continue;
+                    }
                 }
 
                 // 強打で最後なら2倍
                 if (row.effect == 'strike' && index == last_index) {
-                    return sum + mp * 2;
+                    mp *= 2;
                 }
 
-                // 〆ならなし
-                if (row.effect == 'cancel') {
-                    return sum;
+                // 充填されたMPがあれば引く
+                if (filled_mp > 0) {
+                    if (filled_mp > mp) { // 充填MPの方が多い
+                        filled_mp -= mp;
+                        continue;
+                    } else { // 充填を使い切る
+                        mp -= filled_mp;
+                    }
                 }
 
-                return sum + mp;
-            }, 0);
+                sum = sum + mp;
+            }
 
-            // 最後にマイナスだったら充填の残りなのでプラスにする
-            return (sum < 0) ? Math.abs(sum) : sum;
+            // 最後に充填が残っていたらプラスする
+            if (filled_mp > 0) {
+                sum += filled_mp;
+            }
+
+            return sum;
         },
         point() {
             return this.rows.reduce((sum, row) => {
