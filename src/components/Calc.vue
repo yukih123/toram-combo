@@ -65,10 +65,28 @@
                     コンボポイント <span class="point">{{ point }}</span>
                 </el-row>
             </div>
+
+            <el-collapse v-model="active_collapses" class="detail">
+                <el-collapse-item name="1">
+                    <template slot="title">
+                        <i class="header-icon el-icon-info"></i> 使い方・注意事項
+                    </template>
+                    <ul>
+                        <li>コンボに組み込みたいスキルと特殊効果を選択してください。</li>
+                        <li>フィナウ〆やホリフィ〆など、キャンセルで終わらせたい場合は、特殊効果で〆を選んでください。</li>
+                        <li>執念の消費MPは状況によるので、必要MP全てをHPでまかなう(MP消費0)と仮定して計算しています。</li>
+                    </ul>
+                </el-collapse-item>
+                <el-collapse-item name="2">
+                    <template slot="title">
+                        <i class="header-icon el-icon-question"></i> お問い合わせ・バグ報告
+                    </template>
+                    <p>Twitter <a :href="'https://twitter.com/' + config.account">@{{ config.account }}</a> までご連絡ください。</p>
+                    <p>プルリクエストしたい、ソースが見たいという方はDMください。</p>
+                </el-collapse-item>
+            </el-collapse>
         </el-main>
         <el-footer height="auto">
-            <h2><i class="el-icon-info"></i> お問い合わせ・バグ報告</h2>
-            <p>Twitter <a :href="'https://twitter.com/' + config.account">@{{ config.account }}</a> までご連絡ください。</p>
             <p class="license">Favicon by <a href="https://icons8.jp/">icons8</a></p>
         </el-footer>
     </el-container>
@@ -91,6 +109,7 @@ export default {
                 effect: null,
             },
             rows: [],
+            active_collapses: [],
         }
     },
     mounted() {
@@ -202,65 +221,36 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    h1, h2, p {
-        margin: 0;
-    }
-    a {
-        color: #551a8b;
-    }
-    header {
-        padding: 10px;
-        background-color: #AAABD3;
-        border-bottom: 5px #CBA6C3 solid;
-        h1 {
-            color: #F8FAFF;
-            font-family: 'DS-kinshichi';
-            letter-spacing: -0.1em;
-            text-align: center;
-            &:before, &:after {
-                content: '';
-                display: inline-block;
-                width: 20px;
-                height: 20px;
-                margin: 0 5px;
-                background-image: url("/favicon.ico");
-                background-size: contain;
-                vertical-align: middle;
-            }
+@import "../assets/colors.scss";
+.tip {
+    border-bottom: 1px $sub-color solid;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.form {
+    .form_title {
+        font-size: small;
+        .el-col {
+            padding-left: 6px !important;
         }
     }
-    footer {
-        border-top: 1px #CBA6C3 solid;
-        margin: 0 20px;
-        padding: 20px 0;
-        h2 {
-            font-size: medium;
-        }
-        .license {
-            margin-top: 20px;
-        }
+}
+.result {
+    margin-top: 20px;
+    padding-left: 5px;
+    .point {
+        margin-left: 5px;
     }
-    .tip {
-        border-bottom: 1px #CBA6C3 solid;
-        margin-bottom: 20px;
-        padding-bottom: 20px;
-    }
-    .form {
-        .form_title {
-            font-size: small;
-            .el-col {
-                padding-left: 6px !important;
-            }
-        }
-    }
-    .result {
-        margin-top: 20px;
-        padding-left: 5px;
-        .point {
-            margin-left: 5px;
-        }
-    }
-    .el-select {
-        width: 100%;
-    }
+}
+.el-select {
+    width: 100%;
+}
+.detail {
+    border-top: 1px $sub-color solid;
+    margin-top: 20px;
+}
+.license {
+    font-size: small;
+    text-align: right;
+}
 </style>
