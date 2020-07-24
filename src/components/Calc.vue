@@ -77,7 +77,7 @@ export default {
     },
     computed: {
         result() {
-            return this.rows.reduce((sum, row, index, rows) => {
+            let sum = this.rows.reduce((sum, row, index, rows) => {
                 if (row.skill.mp == null) {
                     return sum;
                 }
@@ -116,6 +116,9 @@ export default {
 
                 return sum + mp;
             }, 0);
+
+            // 最後にマイナスだったら充填の残りなのでプラスにする
+            return (sum < 0) ? Math.abs(sum) : sum;
         },
         point() {
             return this.rows.reduce((sum, row) => {
