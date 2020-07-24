@@ -73,17 +73,24 @@
                         <i class="header-icon el-icon-info"></i> 使い方・注意事項
                     </template>
                     <ul>
-                        <li>コンボに組み込みたいスキルと特殊効果を選択してください。</li>
-                        <li>フィナウ〆やホリフィ〆など、キャンセルで終わらせたい場合は、特殊効果で〆を選んでください。</li>
+                        <li>コンボに組み込みたいスキルと特殊効果を選択してください。選択すると次の入力欄が表示されます。</li>
+                        <li>フィナウ〆などキャンセルで終わらせたい場合は、特殊効果で〆を選んでください。</li>
                         <li>執念の消費MPは状況によるので、必要MP全てをHPでまかなう(MP消費0)と仮定して計算しています。</li>
+                        <li>全MPを消費するスキルについては調整中です。</li>
                     </ul>
                 </el-collapse-item>
                 <el-collapse-item name="2">
                     <template slot="title">
-                        <i class="header-icon el-icon-question"></i> お問い合わせ・バグ報告
+                        <i class="header-icon el-icon-question"></i> お問い合わせ・不具合報告
                     </template>
                     <p>Twitter <a :href="'https://twitter.com/' + config.account">@{{ config.account }}</a> までご連絡ください。</p>
-                    <p>プルリクエストしたい、ソースが見たいという方はDMください。</p>
+                    <p>特に下記の情報をいただけると大変助かります。</p>
+                    <ul>
+                        <li>起点に使えないスキル</li>
+                        <li>コンボに組み込めないスキル</li>
+                        <li>スキルレベルでMPが変わるスキル</li>
+                        <li>次のスキルMPが半減するスキル</li>
+                    </ul>
                 </el-collapse-item>
             </el-collapse>
         </el-main>
