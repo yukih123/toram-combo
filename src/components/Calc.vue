@@ -50,7 +50,7 @@
             消費MP {{ result }}
         </el-row>
         <el-row :gutter="10">
-            スキルポイント {{ point }}
+            コンボポイント {{ point }}
         </el-row>
     </div>
 </template>
