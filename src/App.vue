@@ -49,7 +49,8 @@ header {
         font-family: 'DS-kinshichi';
         letter-spacing: -0.1em;
         text-align: center;
-        &:before, &:after {
+        text-indent: -0.5em;
+        &:before {
             content: '';
             display: inline-block;
             width: 20px;
