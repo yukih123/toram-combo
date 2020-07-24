@@ -27,6 +27,7 @@
             </el-col>
             <el-col :span="6">
                 <el-select
+                    v-if="row_index != 0"
                     v-model="row.effect"
                     placeholder="特殊効果を選択">
                     <el-option
@@ -36,6 +37,7 @@
                         :value="key">
                     </el-option>
                 </el-select>
+                <div v-else>なし</div>
             </el-col>
             <el-col :span="2">
                 <i v-if="row.skill_number != null" class="el-icon-delete" @click="deleteRow(row_index)"></i>
