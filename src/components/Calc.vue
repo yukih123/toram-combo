@@ -163,6 +163,6 @@ export default {
     }
     h1 {
         font-family: 'DS-kinshichi';
-        letter-spacing: -0.2em;
+        letter-spacing: -0.1em;
     }
 </style>
