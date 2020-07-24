@@ -68,7 +68,7 @@
             </div>
 
             <el-collapse v-model="active_collapses" class="detail">
-                <el-collapse-item name="1">
+                <el-collapse-item name="how_to_use">
                     <template slot="title">
                         <i class="header-icon el-icon-info"></i> 使い方・注意事項
                     </template>
@@ -79,7 +79,7 @@
                         <li>全MPを消費するスキルについては調整中です。</li>
                     </ul>
                 </el-collapse-item>
-                <el-collapse-item name="2">
+                <el-collapse-item name="inquiry">
                     <template slot="title">
                         <i class="header-icon el-icon-question"></i> お問い合わせ・不具合報告
                     </template>
@@ -117,7 +117,7 @@ export default {
                 effect: null,
             },
             rows: [],
-            active_collapses: [],
+            active_collapses: ["how_to_use"],
         }
     },
     mounted() {
