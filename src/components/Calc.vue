@@ -40,7 +40,7 @@
                 <div v-else>なし</div>
             </el-col>
             <el-col :span="2">
-                <i v-if="row.skill_number != null" class="el-icon-delete" @click="deleteRow(row_index)"></i>
+                <i v-if="row.skill.name != null" class="el-icon-delete" @click="deleteRow(row_index)"></i>
             </el-col>
         </el-row>
         <el-row :gutter="10">
