@@ -188,8 +188,9 @@ export default {
         color: #551a8b;
     }
     header {
-        padding: 5px 10px;
+        padding: 10px;
         background-color: #AAABD3;
+        border-bottom: 5px #CBA6C3 solid;
         h1 {
             color: #F8FAFF;
             font-family: 'DS-kinshichi';
