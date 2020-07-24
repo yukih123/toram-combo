@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>コンボMP計算</h1>
+        <h1>トーラム コンボ計算</h1>
         <el-row v-for="(row, row_index) in rows" :key="row_index" :gutter="10">
             <el-col :span="16">
                 <el-select
@@ -160,5 +160,8 @@ export default {
 <style scoped lang="scss">
     .el-select {
         width: 100%;
+    }
+    h1 {
+        font-family: 'DS-kirigirisu';
     }
 </style>
