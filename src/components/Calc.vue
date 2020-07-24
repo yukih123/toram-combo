@@ -27,6 +27,7 @@
                                 :label="category.name">
                                 <el-option
                                     v-for="(skill, skill_index) in category.skills"
+                                    :disabled="! skill.can_start && row_index == 0"
                                     :key="skill_index"
                                     :label="skill.name + ' ' + skill.mp"
                                     :value="{
