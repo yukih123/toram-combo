@@ -41,7 +41,7 @@ a {
     color: $link-color;
 }
 header {
-    padding: 10px;
+    padding: 10px !important;
     background-color: $main-color;
     border-bottom: 5px $sub-color solid;
     h1 {
