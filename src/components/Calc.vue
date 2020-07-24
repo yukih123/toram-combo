@@ -9,60 +9,67 @@
                 <p>スキルと特殊効果を順に選んでください。</p>
             </div>
             <div class="form">
-                <el-row :gutter="10" class="form_title">
+                <el-row :gutter="5" class="form_title">
                     <el-col :span="16">スキル</el-col>
                     <el-col :span="6">特殊効果</el-col>
                 </el-row>
-                <el-row v-for="(row, row_index) in rows" :key="row_index" :gutter="10">
-                    <el-col :span="16">
-                        <el-select
-                            placeholder="スキルを選択"
-                            v-model="row.skill"
-                            value-key="name"
-                            :disabled="isDisabledSkill(row_index)"
-                            @change="change()">
-                            <el-option-group
-                                v-for="(category, category_index) in skill_categories"
-                                :key="category_index"
-                                :label="category.name">
+                <div v-for="(row, row_index) in rows" :key="row_index">
+                    <el-row :gutter="5">
+                        <el-col :span="16">
+                            <el-select
+                                placeholder="スキルを選択"
+                                v-model="row.skill"
+                                value-key="name"
+                                :disabled="isDisabledSkill(row_index)"
+                                @change="change(row_index)">
+                                <el-option-group
+                                    v-for="(category, category_index) in skill_categories"
+                                    :key="category_index"
+                                    :label="category.name">
+                                    <el-option
+                                        v-for="(skill, skill_index) in category.skills"
+                                        :disabled="! skill.can_start && row_index == 0"
+                                        :key="skill_index"
+                                        :label="skill.name + ' ' + skill.mp"
+                                        :value="{
+                                            name: skill.name,
+                                            mp: skill.mp,
+                                            halve_next: skill.halve_next,
+                                        }">
+                                    </el-option>
+                                </el-option-group>
+                            </el-select>
+                        </el-col>
+                        <el-col :span="6">
+                            <el-select
+                                v-model="row.effect"
+                                placeholder="特殊効果を選択"
+                                :disabled="isDisabledSkill(row_index) || row_index == 0">
                                 <el-option
-                                    v-for="(skill, skill_index) in category.skills"
-                                    :disabled="! skill.can_start && row_index == 0"
-                                    :key="skill_index"
-                                    :label="skill.name + ' ' + skill.mp"
-                                    :value="{
-                                        name: skill.name,
-                                        mp: skill.mp,
-                                        halve_next: skill.halve_next,
-                                    }">
+                                    v-for="(effect, key) in effects"
+                                    :key="key"
+                                    :label="effect"
+                                    :value="key"
+                                    :disabled="isDisabledEffect(row_index) && key != 'none'">
                                 </el-option>
-                            </el-option-group>
-                        </el-select>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-select
-                            v-model="row.effect"
-                            placeholder="特殊効果を選択"
-                            :disabled="isDisabledSkill(row_index) || row_index == 0">
-                            <el-option
-                                v-for="(effect, key) in effects"
-                                :key="key"
-                                :label="effect"
-                                :value="key"
-                                :disabled="isDisabledEffect(row_index) && key != 'none'">
-                            </el-option>
-                        </el-select>
-                    </el-col>
-                    <el-col :span="2">
-                        <i v-if="row.skill.name != null" class="el-icon-delete" @click="deleteRow(row_index)"></i>
-                    </el-col>
-                </el-row>
+                            </el-select>
+                        </el-col>
+                        <el-col :span="2">
+                            <i v-if="row.skill.name != null" class="el-icon-delete" @click="deleteRow(row_index)"></i>
+                        </el-col>
+                    </el-row>
+                    <el-row class="row-info">
+                        <el-col :span="24">
+                            <span class="error" v-if="row.duplicate_error"><i class="el-icon-error"></i> 既に使われています</span>
+                        </el-col>
+                    </el-row>
+                </div>
             </div>
             <div class="result">
-                <el-row :gutter="10">
+                <el-row>
                     消費MP <span class="point">{{ result }}</span>
                 </el-row>
-                <el-row :gutter="10">
+                <el-row>
                     コンボポイント <span class="point">{{ point }}</span>
                 </el-row>
             </div>
@@ -115,6 +122,7 @@ export default {
             init_row: {
                 skill: {},
                 effect: null,
+                duplicate_error: false,
             },
             rows: [],
             active_collapses: ["how_to_use"],
@@ -202,8 +210,20 @@ export default {
         },
     },
     methods: {
-        change() {
+        change(row_index) {
+            this.checkDuplication(row_index);
             this.addRow();
+        },
+        checkDuplication(row_index) {
+            const name = this.rows[row_index].skill.name.replace(/\(.+\)/, "");
+            for (const [index, row] of this.rows.entries()) {
+                if (index == row_index || row.skill.name == null) continue;
+                if (name == row.skill.name.replace(/\(.+\)/, "")) {
+                    this.rows[row_index].duplicate_error = true;
+                    return;
+                }
+            }
+            this.rows[row_index].duplicate_error = false;
         },
         addRow() {
             if (this.rows[this.rows.length - 1].skill.name) {
@@ -260,5 +280,12 @@ export default {
 .license {
     font-size: small;
     text-align: right;
+}
+.error {
+    font-size: small;
+    color: $danger-color;
+}
+.row-info {
+    margin-bottom: 5px;
 }
 </style>
