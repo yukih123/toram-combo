@@ -7,6 +7,7 @@
                     placeholder="スキルを選択"
                     v-model="row.skill"
                     value-key="name"
+                    :disabled="isDisabledSkill(row_index)"
                     @change="change()">
                     <el-option-group
                         v-for="(category, category_index) in skill_categories"
@@ -29,12 +30,14 @@
                 <el-select
                     v-if="row_index != 0"
                     v-model="row.effect"
-                    placeholder="特殊効果を選択">
+                    placeholder="特殊効果を選択"
+                    :disabled="isDisabledSkill(row_index)">
                     <el-option
                         v-for="(effect, key) in effects"
                         :key="key"
                         :label="effect"
-                        :value="key">
+                        :value="key"
+                        :disabled="isDisabledEffect(row_index) && key != 'none'">
                     </el-option>
                 </el-select>
                 <div v-else>なし</div>
@@ -45,6 +48,9 @@
         </el-row>
         <el-row :gutter="10">
             消費MP {{ result }}
+        </el-row>
+        <el-row :gutter="10">
+            スキルポイント {{ point }}
         </el-row>
     </div>
 </template>
@@ -59,7 +65,6 @@ export default {
         return {
             skill_categories: skill_categories,
             effects: effects,
-            point: 20,
             init_row: {
                 skill: {},
                 effect: null,
@@ -112,6 +117,17 @@ export default {
                 return sum + mp;
             }, 0);
         },
+        point() {
+            return this.rows.reduce((sum, row) => {
+                if (row.skill.name) {
+                    sum++;
+                }
+                if (row.effect && row.effect != 'none') {
+                    sum++;
+                }
+                return sum;
+            }, 0);
+        },
     },
     methods: {
         change() {
@@ -127,6 +143,12 @@ export default {
             if (row_index == 0 && this.rows.length == 0) {
                 this.rows.push(Object.assign({}, this.init_row));
             }
+        },
+        isDisabledSkill(row_index) {
+            return this.point >= 20 && this.rows[row_index].skill.name == null;
+        },
+        isDisabledEffect(row_index) {
+            return this.point >= 20 && this.rows[row_index].effect == null;
         },
     }
 }
