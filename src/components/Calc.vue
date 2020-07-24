@@ -3,7 +3,11 @@
         <h1>コンボMP計算</h1>
         <el-row v-for="(row, row_index) in rows" :key="row_index" :gutter="10">
             <el-col :span="16">
-                <el-select placeholder="スキルを選択" v-model="row.skill_number" @change="change(row_index)">
+                <el-select
+                    placeholder="スキルを選択"
+                    v-model="row.skill"
+                    value-key="name"
+                    @change="change()">
                     <el-option-group
                         v-for="(category, category_index) in skill_categories"
                         :key="category_index"
@@ -11,8 +15,12 @@
                         <el-option
                             v-for="(skill, skill_index) in category.skills"
                             :key="skill_index"
-                            :label="category_index + '-' + skill_index + ' ' + skill.name + ' ' + skill.mp"
-                            :value="category_index + '-' + skill_index">
+                            :label="skill.name + ' ' + skill.mp"
+                            :value="{
+                                name: skill.name,
+                                mp: skill.mp,
+                                halve_next: skill.halve_next,
+                            }">
                         </el-option>
                     </el-option-group>
                 </el-select>
@@ -51,11 +59,7 @@ export default {
             effects: effects,
             point: 20,
             init_row: {
-                skill_number: null,
-                category_index: null,
-                skill_index: null,
-                mp: null,
-                halve_next: null,
+                skill: {},
                 effect: null,
             },
             rows: [],
@@ -67,18 +71,18 @@ export default {
     computed: {
         result() {
             return this.rows.reduce((sum, row, index, rows) => {
-                if (row.mp == null) {
+                if (row.skill.mp == null) {
                     return sum;
                 }
 
-                let mp = row.mp;
+                let mp = row.skill.mp;
                 let last_index = rows.length - 1;
                 if (rows[last_index].skill_number == null) {
                     last_index--;
                 }
 
                 // 前が半減スキルなら半減する
-                if (index != 0 && rows[index - 1].halve_next) {
+                if (index != 0 && rows[index - 1].skill.halve_next) {
                     mp = Math.ceil(mp / 10 / 2) * 10;
                 }
 
@@ -104,25 +108,11 @@ export default {
         },
     },
     methods: {
-        change(row_index) {
-            this.setRowData(row_index);
+        change() {
             this.addRow();
         },
-        setRowData(index) {
-            let row = this.rows[index];
-            let number = row.skill_number.split('-');
-
-            row.category_index = number[0];
-            row.skill_index = number[1]
-            row.mp = this.skill_categories[row.category_index]
-                         .skills[row.skill_index]
-                         .mp;
-            row.halve_next = this.skill_categories[row.category_index]
-                         .skills[row.skill_index]
-                         .halve_next;
-        },
         addRow() {
-            if (this.rows[this.rows.length - 1].skill_number != null) {
+            if (this.rows[this.rows.length - 1].skill.name) {
                 this.rows.push(Object.assign({}, this.init_row));
             }
         },
