@@ -25,6 +25,11 @@ body {
     margin: 0;
     color: #353866;
     background-color: #F8FAFF;
-    border-bottom: 15px #CBA6C3 solid;
+    border-bottom: 15px #AAABD3 solid;
+    &:after {
+        content: '';
+        display: block;
+        border-bottom: 5px #CBA6C3 solid;
+    }
 }
 </style>
