@@ -86,7 +86,11 @@ export default {
                     mp = Math.ceil(mp / 10 / 2) * 10;
                 }
 
-                // 連撃 後で考える
+                // 連撃なら起点から数えてマイナスされる
+                if (row.effect == 'continue') {
+                    mp = mp - index * 100;
+                    return (mp < 0) ? sum : sum + mp;
+                }
 
                 // 充填ならマイナス
                 if (row.effect == 'fill') {
