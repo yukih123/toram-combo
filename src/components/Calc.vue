@@ -162,6 +162,7 @@ export default {
         width: 100%;
     }
     h1 {
-        font-family: 'DS-kirigirisu';
+        font-family: 'DS-kinshichi';
+        letter-spacing: -0.2em;
     }
 </style>
