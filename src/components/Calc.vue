@@ -6,16 +6,16 @@
         <el-main>
             <div class="tip">
                 <p>コンボのMPを計算するツールです。</p>
-                <p>スキルと特殊効果を順に選んでください。</p>
+                <p>スキルと特殊効果を選んでください。</p>
             </div>
             <div class="form">
-                <el-row :gutter="5" class="form_title">
-                    <el-col :span="16">スキル</el-col>
+                <el-row :gutter="5" class="form_title" type="flex">
+                    <el-col :span="17">スキル</el-col>
                     <el-col :span="6">特殊効果</el-col>
                 </el-row>
-                <div v-for="(row, row_index) in rows" :key="row_index">
-                    <el-row :gutter="5">
-                        <el-col :span="16">
+                <div v-for="(row, row_index) in rows" :key="row_index" class="row">
+                    <el-row :gutter="5" align="middle" type="flex">
+                        <el-col :span="17">
                             <el-select
                                 placeholder="スキルを選択"
                                 v-model="row.skill"
@@ -54,24 +54,18 @@
                                 </el-option>
                             </el-select>
                         </el-col>
-                        <el-col :span="2">
-                            <i v-if="row.skill.name != null" class="el-icon-delete" @click="deleteRow(row_index)"></i>
+                        <el-col :span="1">
+                            <i v-if="row.skill.name != null" class="el-icon-delete-solid" @click="deleteRow(row_index)"></i>
                         </el-col>
                     </el-row>
-                    <el-row class="row-info">
-                        <el-col :span="24">
-                            <span class="error" v-if="row.duplicate_error"><i class="el-icon-error"></i> 既に使われています</span>
-                        </el-col>
-                    </el-row>
+                    <p>
+                        <span class="error" v-if="row.duplicate_error"><i class="el-icon-error"></i> 既に使われています</span>
+                    </p>
                 </div>
-            </div>
-            <div class="result">
-                <el-row>
-                    消費MP <span class="point">{{ result }}</span>
-                </el-row>
-                <el-row>
-                    コンボポイント <span class="point">{{ point }}</span>
-                </el-row>
+                <div class="result">
+                    <p>消費MP <span class="point">{{ result }}</span></p>
+                    <p>コンボポイント <span class="point">{{ point }}</span></p>
+                </div>
             </div>
 
             <el-collapse v-model="active_collapses" class="detail">
@@ -250,43 +244,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/colors.scss";
-.tip {
-    border-bottom: 1px $sub-color solid;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-}
-.form {
-    .form_title {
-        font-size: small;
-        .el-col {
-            padding-left: 6px !important;
-        }
-    }
-}
-.result {
-    margin-top: 20px;
-    padding-left: 5px;
-    .point {
-        margin-left: 5px;
-    }
-}
-.el-select {
-    width: 100%;
-}
-.detail {
-    border-top: 1px $sub-color solid;
-    margin-top: 20px;
-}
-.license {
-    font-size: small;
-    text-align: right;
-}
-.error {
-    font-size: small;
-    color: $danger-color;
-}
-.row-info {
-    margin-bottom: 5px;
-}
 </style>
