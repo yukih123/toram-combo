@@ -161,7 +161,7 @@ export default {
 
                 // 前が半減スキルなら半減する
                 if (index != 0 && this.rows[index - 1].skill.halve_next) {
-                    mp = Math.ceil(mp / 10 / 2) * 10;
+                    mp = Math.ceil(mp / 100 / 2) * 100;
                 }
 
                 // 連撃なら起点から数えてマイナスされる
