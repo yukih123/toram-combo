@@ -17,6 +17,9 @@ export default {
 
 <style lang="scss">
 @import "assets/colors.scss";
+@import "assets/scss/main.scss";
+/*
+@import "assets/colors.scss";
 
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -81,4 +84,5 @@ footer {
 .el-collapse-item__wrap {
     font-size: medium !important;
 }
+*/
 </style>
