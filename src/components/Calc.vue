@@ -184,6 +184,7 @@ export default {
                         continue;
                     } else { // 充填を使い切る
                         mp -= filled_mp;
+                        filled_mp = 0;
                     }
                 }
 
