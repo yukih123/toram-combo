@@ -1,9 +1,9 @@
 <template>
-    <el-container>
-        <el-header height="auto">
+    <div>
+        <header>
             <h1>{{ env.VUE_APP_TITLE }}</h1>
-        </el-header>
-        <el-main>
+        </header>
+        <main>
             <div class="tip">
                 <p>コンボのMPを計算するツールです。</p>
                 <p>スキルと特殊効果を選んでください。</p>
@@ -94,14 +94,14 @@
                     </ul>
                 </el-collapse-item>
             </el-collapse>
-        </el-main>
-        <el-footer height="auto">
+        </main>
+        <footer>
             <p>
                 <a class="tweet" :href="'http://twitter.com/share?url=' + env.VUE_APP_URL + '&text=' + env.VUE_APP_TITLE + '&hashtags=トーラム'" target="_blank">Twitteでシェア</a>
             </p>
             <p class="license">Icon by <a href="https://www.deviantart.com/raindropmemory">Raindropmemory</a></p>
-        </el-footer>
-    </el-container>
+        </footer>
+    </div>
 </template>
 
 <script>
