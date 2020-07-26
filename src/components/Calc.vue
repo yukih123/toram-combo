@@ -96,12 +96,15 @@
             </el-collapse>
         </el-main>
         <el-footer height="auto">
-            <p><a :href="'https://twiter.com/share?url=' + env.VUE_APP_URL">Twitterでシェア</a></p>
-            <p class="license">Favicon by <a href="https://www.deviantart.com/raindropmemory">Raindropmemory</a></p>
+            <p class="tweet">
+                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" :data-text="env.VUE_APP_TITLE">Twitteでシェア</a>
+            </p>
+            <p class="license">Icon by <a href="https://www.deviantart.com/raindropmemory">Raindropmemory</a></p>
         </el-footer>
     </el-container>
 </template>
 
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script>
 import skill_categories from '../assets/skills.min.json'
 import effects from '../assets/effects.min.json'

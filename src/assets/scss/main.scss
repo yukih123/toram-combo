@@ -126,14 +126,6 @@ header {
 .el-select {
     width: 100%;
 }
-.license {
-    font-size: small;
-    text-align: right;
-}
-.error {
-    font-size: small;
-    color: $danger-color;
-}
 .el-collapse {
     border: none !important;
     .el-collapse-item__header,
@@ -168,4 +160,27 @@ header {
             font-size: 0.9em !important;
         }
     }
+}
+.error {
+    font-size: small;
+    color: $danger-color;
+}
+.tweet {
+    > a {
+        &:before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 26px;
+            height: 26px;
+            background: no-repeat center url("/images/angel_wing.png");
+            background-size: cover;
+            position: relative;
+            top: -2px;
+        }
+    }
+}
+.license {
+    font-size: small;
+    text-align: right;
 }
