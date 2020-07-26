@@ -96,7 +96,7 @@
             </el-collapse>
         </el-main>
         <el-footer height="auto">
-            <p class="license">Favicon by <a href="https://icons8.jp/">icons8</a></p>
+            <p class="license">Favicon by <a href="https://www.deviantart.com/raindropmemory">Raindropmemory</a></p>
         </el-footer>
     </el-container>
 </template>
