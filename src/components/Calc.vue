@@ -1,7 +1,7 @@
 <template>
     <el-container>
         <el-header height="auto">
-            <h1>{{ config.title }}</h1>
+            <h1>{{ env.VUE_APP_TITLE }}</h1>
         </el-header>
         <el-main>
             <div class="tip">
@@ -84,7 +84,7 @@
                     <template slot="title">
                         <i class="header-icon el-icon-question"></i> お問い合わせ・不具合報告
                     </template>
-                    <p>Twitter <a :href="'https://twitter.com/' + config.account">@{{ config.account }}</a> までご連絡ください。</p>
+                    <p>Twitter <a :href="'https://twitter.com/' + env.VUE_APP_TWITTER_ACCOUNT">@{{ env.VUE_APP_TWITTER_ACCOUNT }}</a> までご連絡ください。</p>
                     <p>特に下記の情報をいただけると大変助かります。</p>
                     <ul>
                         <li>起点に使えないスキル</li>
@@ -103,7 +103,6 @@
 </template>
 
 <script>
-import config from '../assets/config.min.json'
 import skill_categories from '../assets/skills.min.json'
 import effects from '../assets/effects.min.json'
 
@@ -112,7 +111,6 @@ export default {
     data() {
         return {
             env: {},
-            config: config,
             skill_categories: skill_categories,
             effects: effects,
             init_row: {
