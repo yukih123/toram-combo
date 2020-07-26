@@ -71,6 +71,9 @@ h1 {
         transform: rotate(90deg) scale(0.5, 1) translate(0, 2px);
     }
 }
+.el-main {
+    padding: 10px !important;
+}
 .tip {
     line-height: 1;
     border-width: 15px;
@@ -80,7 +83,7 @@ h1 {
     text-align: center;
     width: auto;
     height: 2em;
-    margin: 0 calc(50% - 10em) 20px;
+    margin: 10px calc(50% - 10em) 20px;
 }
 .form {
     color: $font-color-form;
@@ -88,7 +91,7 @@ h1 {
     border-style: solid;
     border-image: url('/images/frame2.png') fill 25 round;
     margin: 20px 0;
-    padding: 5px;
+    padding: 0;
     .row {
         margin-bottom: 5px;
     }
