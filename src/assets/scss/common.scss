@@ -1,6 +1,7 @@
 @font-face {
-font-family: "GenEi LateMin";
+    font-family: "GenEi LateMin";
     src: url("/fonts/GenEiLateMin_joyo.woff2") format("woff2");
+    font-display: swap;
 }
 
 $danger-color: #a00;
