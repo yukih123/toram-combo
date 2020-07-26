@@ -75,7 +75,7 @@ h1 {
     line-height: 1;
     border-width: 15px;
     border-style: solid;
-    border-image: url('/images/frame1.png') 20 stretch;
+    border-image: url('/images/frame1.png') 20 round;
     border-image-width: 15px;
     text-align: center;
     width: auto;
@@ -86,7 +86,7 @@ h1 {
     color: $font-color-form;
     border-width: 25px;
     border-style: solid;
-    border-image: url('/images/frame2.png') fill 25 stretch;
+    border-image: url('/images/frame2.png') fill 25 round;
     margin: 20px 0;
     padding: 5px;
     .row {
