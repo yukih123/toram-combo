@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "assets/colors.scss";
+@import "assets/scss/common.scss";
 @import "assets/scss/main.scss";
 /*
 @import "assets/colors.scss";
