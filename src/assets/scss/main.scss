@@ -10,9 +10,12 @@ body {
     font-family: $font-family;
     line-height: 1.2;
 }
+header, main, footer {
+    margin: 20px 0;
+    padding: 0 10px;
+}
 header {
     margin: 0;
-    padding: 0 !important;
     background: no-repeat center url("/images/bg.jpg");
     background-size: cover;
     position: relative;
@@ -34,6 +37,7 @@ header {
 h1 {
     color: #fff;
     padding: 30px 10px;
+    font-size: 1.5em;
     text-align: center;
     text-indent: -0.5em;
     text-shadow:
@@ -70,9 +74,6 @@ h1 {
         margin-left: 10px;
         transform: rotate(90deg) scale(0.5, 1) translate(0, 2px);
     }
-}
-.el-main {
-    padding: 10px !important;
 }
 .tip {
     line-height: 1;
