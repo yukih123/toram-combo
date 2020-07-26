@@ -96,8 +96,8 @@
             </el-collapse>
         </el-main>
         <el-footer height="auto">
-            <p class="tweet">
-                <a :href="'http://twitter.com/share?url=' + env.VUE_APP_URL + '&text=' + env.VUE_APP_TITLE + '&hashtags=トーラム'" target="_blank">Twitteでシェア</a>
+            <p>
+                <a class="tweet" :href="'http://twitter.com/share?url=' + env.VUE_APP_URL + '&text=' + env.VUE_APP_TITLE + '&hashtags=トーラム'" target="_blank">Twitteでシェア</a>
             </p>
             <p class="license">Icon by <a href="https://www.deviantart.com/raindropmemory">Raindropmemory</a></p>
         </el-footer>
