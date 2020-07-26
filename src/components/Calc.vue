@@ -42,6 +42,7 @@
                         </el-col>
                         <el-col :span="6">
                             <el-select
+                                v-if="row_index != 0"
                                 v-model="row.effect"
                                 placeholder="特殊効果を選択"
                                 :disabled="isDisabledSkill(row_index) || row_index == 0">
@@ -53,6 +54,7 @@
                                     :disabled="isDisabledEffect(row_index) && key != 'none'">
                                 </el-option>
                             </el-select>
+                            <div class="first-effect" v-else>なし</div>
                         </el-col>
                         <el-col :span="1">
                             <i v-if="row.skill.name != null" class="el-icon-delete-solid" @click="deleteRow(row_index)"></i>
