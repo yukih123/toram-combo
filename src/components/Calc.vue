@@ -235,6 +235,7 @@ export default {
             if (row_index == 0 && this.rows.length == 0) {
                 this.rows.push(Object.assign({}, this.init_row));
             }
+            this.rows[0].effect = null;
         },
         isDisabledSkill(row_index) {
             return this.point >= 20
