@@ -96,6 +96,7 @@
             </el-collapse>
         </el-main>
         <el-footer height="auto">
+            <p><a :href="'https://twiter.com/share?url=' + env.VUE_APP_URL">Twitterでシェア</a></p>
             <p class="license">Favicon by <a href="https://www.deviantart.com/raindropmemory">Raindropmemory</a></p>
         </el-footer>
     </el-container>
@@ -110,6 +111,7 @@ export default {
     name: 'Calc',
     data() {
         return {
+            env: {},
             config: config,
             skill_categories: skill_categories,
             effects: effects,
@@ -123,6 +125,7 @@ export default {
         }
     },
     mounted() {
+        this.env = process.env;
         this.rows.push(Object.assign({}, this.init_row));
     },
     computed: {
