@@ -97,7 +97,7 @@
         </main>
         <footer>
             <p>
-                <a class="tweet" :href="'http://twitter.com/share?url=' + env.VUE_APP_URL + '&text=' + env.VUE_APP_TITLE + '&hashtags=トーラム'" target="_blank">Twitteでシェア</a>
+                <a class="tweet" :href="'http://twitter.com/share?url=' + env.VUE_APP_URL + '&text=' + env.VUE_APP_TITLE + '&hashtags=トーラム'" target="_blank">Twitterでシェア</a>
             </p>
             <p class="license">Icon by <a href="https://www.deviantart.com/raindropmemory">Raindropmemory</a></p>
         </footer>
