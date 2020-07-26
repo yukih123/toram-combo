@@ -62,10 +62,10 @@
                         <span class="error" v-if="row.duplicate_error"><i class="el-icon-error"></i> 既に使われています</span>
                     </p>
                 </div>
-                <div class="result">
-                    <p>消費MP <span class="point">{{ result }}</span></p>
-                    <p>コンボポイント <span class="point">{{ point }}</span></p>
-                </div>
+                <ul class="result">
+                    <li>消費MP <span class="point">{{ result }}</span></li>
+                    <li>コンボポイント <span class="point">{{ point }}</span></li>
+                </ul>
             </div>
 
             <el-collapse v-model="active_collapses" class="detail">
