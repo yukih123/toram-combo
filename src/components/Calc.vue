@@ -132,16 +132,17 @@ export default {
     },
     computed: {
         result() {
+            const rows = this.rows;
             let sum = 0;
             let filled_mp = 0;
-            let last_index = this.rows.length - 1;
+            let last_index = rows.length - 1;
             if (last_index < 0) {
                 last_index = 0;
-            } else if (last_index != 0 && this.rows[last_index].skill.name == null) {
+            } else if (last_index != 0 && rows[last_index].skill.name == null) {
                 last_index--;
             }
 
-            for (const [index, row] of this.rows.entries()) {
+            for (const [index, row] of rows.entries()) {
                 let mp = row.skill.mp;
                 if (mp == null) {
                     break;
@@ -165,7 +166,7 @@ export default {
                 }
 
                 // 前が半減スキルなら半減する
-                if (index != 0 && this.rows[index - 1].skill.halve_next) {
+                if (index != 0 && rows[index - 1].skill.halve_next) {
                     mp = Math.ceil(mp / 100 / 2) * 100;
                 }
 
@@ -216,15 +217,16 @@ export default {
             this.addRow();
         },
         checkDuplication(row_index) {
-            const name = this.rows[row_index].skill.name.replace(/\(.+\)/, "");
-            for (const [index, row] of this.rows.entries()) {
+            const rows = this.rows;
+            const name = rows[row_index].skill.name.replace(/\(.+\)/, "");
+            for (const [index, row] of rows.entries()) {
                 if (index == row_index || row.skill.name == null) continue;
                 if (name == row.skill.name.replace(/\(.+\)/, "")) {
-                    this.rows[row_index].duplicate_error = true;
+                    rows[row_index].duplicate_error = true;
                     return;
                 }
             }
-            this.rows[row_index].duplicate_error = false;
+            rows[row_index].duplicate_error = false;
         },
         addRow() {
             if (this.rows[this.rows.length - 1].skill.name) {
