@@ -1,0 +1,275 @@
+[
+    {
+        "name": "ブレードスキル",
+        "skills": [
+			{ "name" : "ハードヒット",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "アステュート",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "トリガースラッシュ(〜Lv5)",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "トリガースラッシュ(Lv6〜)",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ランページ",  "mp" : 500,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "メテオブレイカー",  "mp" : 600,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "アクセルブレード",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "スパイラルエアー",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ソードテンペスト",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "バスターブレード",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ウォークライ",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "バーサーク",  "mp" : 500,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ファストアタック",  "mp" : 300,  "can_start" : true,  "halve_next" : true }
+		]
+	},
+    {
+        "name": "シュートスキル",
+        "skills": [
+			{ "name" : "パワーシュート",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ワンホイール",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "アローレイン",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "スナイピング",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "クロスファイア",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "メーバショット",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "パライズショット",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "スモークダスト",  "mp" : 500,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "アームブレイク",  "mp" : 700,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ハイドアタック",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "デコイシューター",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "デストルクショット",  "mp" : 200,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "マジックスキル",
+        "skills": [
+			{ "name" : "術式/アロー",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "術式/ジャベリン",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "術式/ランサー",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "術式/インパクト",  "mp" : 200,  "can_start" : true,  "halve_next" : true },
+			{ "name" : "術式/フィナウ",  "mp" : 1600,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "術式/ウォール",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "術式/ブラスト",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "術式/ストーム",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "術式/バースト",  "mp" : 500,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "チャージング",  "mp" : 0,  "can_start" : false,  "halve_next" : false },
+			{ "name" : "マキシマイザー",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "術式/イーゲル",  "mp" : 300,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "マーシャルスキル",
+        "skills": [
+			{ "name" : "スマッシュ",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "バッシュ",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "シェルブレイク",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ヘビースマッシュ",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "チャリオット",  "mp" : 500,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ソニックウェーブ",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "アースバインド",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "トライアーツ",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ラッシュ",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "チャクラ",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "スライディング",  "mp" : 100,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "ハルバードスキル",
+        "skills": [
+			{ "name" : "フラッシュスタブ",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "キャノンスピア",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ドラゴンテイル",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ダイブインパクト",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ドラゴントゥース",  "mp" : 500,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "デッドリースピア",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "パニッシュレイ",  "mp" : 0,  "can_start" : false,  "halve_next" : false },
+			{ "name" : "ストライクスタブ",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "クロノスドライブ",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "クイックオーラ",  "mp" : 0,  "can_start" : false,  "halve_next" : false },
+			{ "name" : "迅速の捌手",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "バスターランス",  "mp" : 100,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "モノノフスキル",
+        "skills": [
+			{ "name" : "一閃",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "波動刃",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "三段突き",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "八相発破",  "mp" : 500,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "天流乱星",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "画竜点睛",  "mp" : 500,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "柄打ち",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "斬釘截鉄",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "明鏡止水",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "怪力乱神",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "刃弾き",  "mp" : 100,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "デュアルソードスキル",
+        "skills": [
+			{ "name" : "ツインスラッシュ",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "エアスライド",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ファントムレイヴ",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "パリングソード",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ドラグーンソード",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "回り込み(〜Lv2)",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "回り込み(〜Lv6)",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "回り込み(Lv7〜)",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "シャイニングクロス",  "mp" : 600,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ステップリアクター",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "フィロ･エクレール",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "シュツルムリーパー",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "セイバーオーラ",  "mp" : 900,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "クラッシャースキル",
+        "skills": [
+			{ "name" : "正拳突き",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ゴリアステイクショット",  "mp" : 500,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ゴッドハンド",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "呼吸法",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "フローティングキック",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "コンビネーション",  "mp" : 0,  "can_start" : false,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "シールドスキル",
+        "skills": [
+			{ "name" : "シールドバッシュ",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "シールドキャノン",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "プロテクション",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "プロテクション(盾)",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "イージス",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "イージス(盾)",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ガーディアン",  "mp" : 600,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "ナイフスキル",
+        "skills": [
+			{ "name" : "スパイクダート",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ガトリングナイフ",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "スローイング(〜Lv9)",  "mp" : "10",  "can_start" : false,  "halve_next" : false },
+			{ "name" : "スローイング(Lv10)",  "mp" : 0,  "can_start" : false,  "halve_next" : false },
+			{ "name" : "ポイズンダガー",  "mp" : 200,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "ナイトスキル",
+        "skills": [
+			{ "name" : "アサルトアタック",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "Pディフェンス",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "レイジソード",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "バインドストライク",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ファーレス",  "mp" : 500,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "ハンタースキル",
+        "skills": [
+			{ "name" : "キックバック",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "サンライズアロー",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "フォースアロー",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "サテライトアロー",  "mp" : 300,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "プリーストスキル",
+        "skills": [
+			{ "name" : "ブレス",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "グロリア",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ホーリーフィスト",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ホーリーライト",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "エーテルコート",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ハイネスヒール",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "プリエール",  "mp" : 500,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "マジックブレードスキル",
+        "skills": [
+			{ "name" : "レゾナンス",  "mp" : 0,  "can_start" : false,  "halve_next" : false },
+			{ "name" : "エーテルフレア",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "エレメントスラッシュ",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "エンチャントソード",  "mp" : 300,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "ダークパワースキル",
+        "skills": [
+			{ "name" : "ブラッドバイト",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "レッドティアー",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "サクリファイス",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ダークスティンガー",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "デーモンクロウ",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "リグレット",  "mp" : 200,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "アサシンスキル",
+        "skills": [
+			{ "name" : "アサシンスタブ",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "バックステップ",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "フューネヴィンデ",  "mp" : 99999,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "イベーション",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "シエラム",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "シャドウウォーク",  "mp" : 100,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "ウィザードスキル",
+        "skills": [
+			{ "name" : "マナクリスタル",  "mp" : 0,  "can_start" : false,  "halve_next" : false },
+			{ "name" : "ライトニング",  "mp" : 0,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ブリザード",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "メテオストライク",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ストーンスキン",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "インペリアルレイ",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ハイファミリア",  "mp" : 300,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "ベアハンドスキル",
+        "skills": [
+			{ "name" : "集気功",  "mp" : 99999,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "獅子奮迅",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "疾風怒涛",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "回復気功",  "mp" : 100,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "サポートスキル",
+        "skills": [
+			{ "name" : "サンクチュアリ",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ハイリアクション",  "mp" : 600,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "ダンサースキル",
+        "skills": [
+			{ "name" : "妖精の舞",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "激情の舞",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "鋭敏な舞",  "mp" : 500,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "魅惑の舞",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "応援の舞",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "優雅な構え",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "花鳥風月",  "mp" : 400,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "ミンストレルスキル",
+        "skills": [
+			{ "name" : "癒しの歌",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "妖精の歌",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "熱情の歌",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "智解の歌",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "生命の歌",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "夢幻の歌",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "アドリブ",  "mp" : 100,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
+        "name": "テイマースキル",
+        "skills": [
+			{ "name" : "ペットヒール",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ペットチャージ",  "mp" : 300,  "can_start" : true,  "halve_next" : false }
+		]
+	}
+]

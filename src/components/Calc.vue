@@ -107,8 +107,8 @@
 </template>
 
 <script>
-import skill_categories from '../assets/skills.min.json'
-import effects from '../assets/effects.min.json'
+import skill_categories from '../assets/json/skills.json'
+import effects from '../assets/json/effects.json'
 
 export default {
     name: 'Calc',
