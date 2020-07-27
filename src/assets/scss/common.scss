@@ -3,15 +3,18 @@
     src: url("/fonts/GenEiLateMin_joyo.woff2") format("woff2");
     font-display: swap;
 }
-
-$danger-color: #a00;
+$font-family: "GenEi LateMin";
 
 $background-color: #1a2940;
 $font-color: #cecdcb;
 $font-color-form: #420;
 $font-color-link: #fff;
+$danger-color: #a00;
 
-$font-family: "GenEi LateMin";
-.test {
-    font-family: $font-family;
+@mixin frame() {
+    border-width: 5px;
+    border-style: solid;
+    border-image: url('/images/frame1.png') 25 stretch;
+    border-image-width: 15px;
+    padding: 5px 10px;
 }

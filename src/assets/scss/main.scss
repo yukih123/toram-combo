@@ -24,10 +24,9 @@ header {
 }
 h1 {
     color: #fff;
-    padding: 30px 10px;
+    padding: 20px 10px 25px;
     font-size: 1.5em;
     text-align: center;
-    text-indent: -0.5em;
     text-shadow:
         0 0 10px #0df,
         0 0 10px #0df,
@@ -64,14 +63,8 @@ h1 {
     }
 }
 .tip {
-    line-height: 1;
-    border-width: 15px;
-    border-style: solid;
-    border-image: url('/images/frame1.png') 20 round;
-    border-image-width: 15px;
+    @include frame();
     text-align: center;
-    width: auto;
-    height: 2em;
     margin: 10px calc(50% - 10em) 20px;
 }
 .form {
@@ -81,13 +74,13 @@ h1 {
     border-image: url('/images/frame2.png') fill 25 round;
     margin: 20px 0;
     padding: 0;
-    .row {
-        margin-bottom: 5px;
-    }
+}
+.row {
+    margin-bottom: 5px;
 }
 .form_title {
     font-size: small;
-    .el-col {
+    .el-row {
         padding-left: 6px !important;
     }
 }
@@ -107,46 +100,28 @@ h1 {
 .point {
     margin-left: 5px;
 }
-.el-input__inner {
-    font-family: $font-family;
-}
 .el-select {
     width: 100%;
 }
 .first-effect {
-    padding-left: 2px;
+    padding-left: 2.5px;
 }
-.el-collapse {
-    border: none !important;
+.el-collapse-item__header {
+    padding: 5px 0;
 }
-.el-collapse-item__header,
-.el-collapse-item__wrap,
+.el-collapse-item {
+    @include frame();
+    margin-top: 10px;
+}
 .el-collapse-item__content {
-    color: $font-color !important;
-    background-color: transparent !important;
+    font-size: 0.9em !important;
+    margin-top: 0.3em;
     ul {
         padding-left: 20px;
     }
-}
-.el-collapse-item {
-    margin-top: 10px;
-    padding: 0 10px;
-    border-width: 5px;
-    border-style: solid;
-    border-image: url('/images/frame1.png') 25 stretch;
-    border-image-width: 15px;
-}
-.el-collapse-item__header {
-    height: 2.5em;
-    font-size: medium !important;
-}
-.el-collapse-item__header,
-.el-collapse-item__wrap {
-    border: none !important;
-}
-.el-collapse-item__content {
-    padding-bottom: 10px;
-    font-size: 0.9em !important;
+    li {
+        margin-bottom: 0.3em;
+    }
 }
 .header-icon {
     margin-right: 5px;
@@ -169,4 +144,33 @@ h1 {
 .license {
     font-size: small;
     text-align: right;
+}
+
+
+
+// Initialize Element UIStyles
+.el-input__inner {
+    font-family: $font-family;
+}
+.el-collapse {
+    border: none !important;
+}
+.el-collapse-item__header,
+.el-collapse-item__wrap,
+.el-collapse-item__content {
+    color: $font-color !important;
+    background-color: transparent !important;
+}
+.el-collapse-item__header {
+    font-size: medium !important;
+    height: auto !important;
+    line-height: 1 !important;
+}
+.el-collapse-item__header,
+.el-collapse-item__wrap {
+    border: none !important;
+}
+.el-collapse-item__content {
+    padding-bottom: 0 !important;
+    font-size: 0.9em !important;
 }
