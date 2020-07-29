@@ -6,8 +6,10 @@ import {
     Option,
     OptionGroup,
     Collapse,
-    CollapseItem
+    CollapseItem,
+    Icon
 } from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 import lang from 'element-ui/lib/locale/lang/ja'
 import locale from 'element-ui/lib/locale'
 
@@ -20,3 +22,4 @@ Vue.use(Option);
 Vue.use(OptionGroup);
 Vue.use(Collapse);
 Vue.use(CollapseItem);
+Vue.use(Icon);
