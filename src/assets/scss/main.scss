@@ -18,8 +18,14 @@ header {
     margin: 0;
     background:
         linear-gradient(0deg, $background-color, transparent 10px),
-        no-repeat center url("/images/bg.jpg");
+        no-repeat center url(/images/bg.jpg);
     background-size: cover;
+    @include media(large) {
+        background:
+            linear-gradient(0deg, $background-color, transparent 10px),
+            no-repeat bottom center url(/images/bg_large.jpg);
+        background-size: 100%;
+    }
     position: relative;
 }
 h1 {
