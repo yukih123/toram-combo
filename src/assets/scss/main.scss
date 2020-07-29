@@ -72,6 +72,11 @@ h1 {
     @include frame();
     text-align: center;
     margin: 10px calc(50% - 10em) 20px;
+    @media screen and (max-width: 20em) {
+        // 画面幅が20文字より小さければ幅100%にする
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 .form {
     color: $font-color-form;
