@@ -70,22 +70,18 @@
                 </ul>
             </div>
 
-            <el-collapse v-model="active_collapses" class="detail">
-                <el-collapse-item name="how_to_use">
-                    <template slot="title">
-                        <i class="header-icon el-icon-info"></i> 使い方・注意事項
-                    </template>
-                    <ul>
-                        <li>コンボに組み込みたいスキルと特殊効果を選択してください。選択すると次の入力欄が表示されます。</li>
-                        <li>フィナウ〆などキャンセルで終わらせたい場合は、特殊効果で〆を選んでください。</li>
-                        <li>執念の消費MPは状況によるので、必要MP全てをHPでまかなう(MP消費0)と仮定して計算しています。</li>
-                        <li>全MPを消費するスキルについては調整中です。</li>
-                    </ul>
-                </el-collapse-item>
-                <el-collapse-item name="inquiry">
-                    <template slot="title">
-                        <i class="header-icon el-icon-question"></i> お問い合わせ・不具合報告
-                    </template>
+            <details open>
+                <summary><i class="header-icon el-icon-info"></i> 使い方・注意事項</summary>
+                <ul class="details-content">
+                    <li>コンボに組み込みたいスキルと特殊効果を選択してください。選択すると次の入力欄が表示されます。</li>
+                    <li>フィナウ〆などキャンセルで終わらせたい場合は、特殊効果で〆を選んでください。</li>
+                    <li>執念の消費MPは状況によるので、必要MP全てをHPでまかなう(MP消費0)と仮定して計算しています。</li>
+                    <li>全MPを消費するスキルについては調整中です。</li>
+                </ul>
+            </details>
+            <details>
+                <summary><i class="header-icon el-icon-question"></i> お問い合わせ・不具合報告</summary>
+                <div class="details-content">
                     <p>Twitter <a :href="'https://twitter.com/' + env.VUE_APP_TWITTER_ACCOUNT">@{{ env.VUE_APP_TWITTER_ACCOUNT }}</a> までご連絡ください。</p>
                     <p>特に下記の情報をいただけると大変助かります。</p>
                     <ul>
@@ -94,8 +90,8 @@
                         <li>スキルレベルでMPが変わるスキル</li>
                         <li>次のスキルMPが半減するスキル</li>
                     </ul>
-                </el-collapse-item>
-            </el-collapse>
+                </div>
+            </details>
         </main>
         <footer>
             <p>

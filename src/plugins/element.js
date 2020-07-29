@@ -5,14 +5,10 @@ import {
     Select,
     Option,
     OptionGroup,
-    Collapse,
-    CollapseItem,
     Icon
 } from 'element-ui'
 
 import 'element-ui/lib/theme-chalk/col.css'
-import 'element-ui/lib/theme-chalk/collapse-item.css'
-import 'element-ui/lib/theme-chalk/collapse.css'
 import 'element-ui/lib/theme-chalk/icon.css'
 import 'element-ui/lib/theme-chalk/option-group.css'
 import 'element-ui/lib/theme-chalk/option.css'
@@ -29,6 +25,4 @@ Vue.use(Col);
 Vue.use(Select);
 Vue.use(Option);
 Vue.use(OptionGroup);
-Vue.use(Collapse);
-Vue.use(CollapseItem);
 Vue.use(Icon);
