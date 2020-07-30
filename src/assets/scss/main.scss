@@ -18,8 +18,14 @@ header {
     margin: 0;
     background:
         linear-gradient(0deg, $background-color, transparent 10px),
-        no-repeat center url("/images/bg.jpg");
+        no-repeat center url(/images/bg.jpg);
     background-size: cover;
+    @include media(large) {
+        background:
+            linear-gradient(0deg, $background-color, transparent 10px),
+            no-repeat bottom center url(/images/bg_large.jpg);
+        background-size: 100%;
+    }
     position: relative;
 }
 h1 {
@@ -66,6 +72,11 @@ h1 {
     @include frame();
     text-align: center;
     margin: 10px calc(50% - 10em) 20px;
+    @media screen and (max-width: 20em) {
+        // 画面幅が20文字より小さければ幅100%にする
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 .form {
     color: $font-color-form;
@@ -75,14 +86,22 @@ h1 {
     margin: 20px 0;
     padding: 0;
 }
-.row {
-    margin-bottom: 5px;
-}
 .form_title {
     font-size: small;
     .el-row {
         padding-left: 6px !important;
     }
+}
+.form_input_row {
+    margin-top: 6px;
+    .form_title + & {
+        margin-top: 0;
+    }
+}
+.error {
+    font-size: smaller;
+    color: $danger-color;
+    margin-top: 2px;
 }
 .result {
     margin: 20px 0 5px;
@@ -106,29 +125,67 @@ h1 {
 .first-effect {
     padding-left: 2.5px;
 }
-.el-collapse-item__header {
-    padding: 5px 0;
-}
-.el-collapse-item {
+details {
     @include frame();
     margin-top: 10px;
-}
-.el-collapse-item__content {
-    font-size: 0.9em !important;
-    margin-top: 0.3em;
+    padding: 0 10px;
+    font-size: 95%;
+    line-height: 1.5;
     ul {
         padding-left: 20px;
     }
-    li {
+    li, p {
+        margin-bottom: 0.5em;
+    }
+
+    // 動くけど閉じたらすぐ文字が消える height em
+//    transition: height 1s ease;
+//    &:not([open]) { height: 2em; }
+//    &[open] { height: 10em; }
+}
+
+// 閉じは諦めたバージョン
+details[open] .details-content {
+    animation: open 0.5s linear;
+}
+@keyframes open {
+    0% {
+        max-height: 0;
+        overflow: hidden;
+    }
+    100% {
+        max-height: 100vh;
+        overflow: auto;
+    }
+}
+summary {
+    font-size: medium;
+    padding: 5px 0;
+    outline: none;
+    display: flex;
+    align-items: center;
+    &::-webkit-details-marker { // Chrome, Safariのマーカー
+        display: none;
+    }
+    &:after {
+        font-family: element-icons;
+        content: "\e6e0";
+        display: block;
+        margin: 0 8px 0 auto;
+        transition: transform .3s;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    details[open] & {
         margin-bottom: 0.3em;
+    }
+    details[open] &:after {
+        transform: rotate(90deg);
     }
 }
 .header-icon {
     margin-right: 5px;
-}
-.error {
-    font-size: small;
-    color: $danger-color;
 }
 .tweet:before {
     content: "";
@@ -151,26 +208,4 @@ h1 {
 // Initialize Element UIStyles
 .el-input__inner {
     font-family: $font-family;
-}
-.el-collapse {
-    border: none !important;
-}
-.el-collapse-item__header,
-.el-collapse-item__wrap,
-.el-collapse-item__content {
-    color: $font-color !important;
-    background-color: transparent !important;
-}
-.el-collapse-item__header {
-    font-size: medium !important;
-    height: auto !important;
-    line-height: 1 !important;
-}
-.el-collapse-item__header,
-.el-collapse-item__wrap {
-    border: none !important;
-}
-.el-collapse-item__content {
-    padding-bottom: 0 !important;
-    font-size: 0.9em !important;
 }
