@@ -20,6 +20,13 @@
         <noscript>
             <strong>JavaScriptを有効にしてください。</strong>
         </noscript>
+        <header>
+            <h1><%= VUE_APP_TITLE %></h1>
+        </header>
         <div id="app"></div>
+        <footer>
+            <p><a class="tweet" href="http://twitter.com/share?url=<%= VUE_APP_URL %>&text=<%= VUE_APP_TITLE %>&hashtags=トーラム" target="_blank">Twitterでシェア</a></p>
+            <p class="license">Icon by <a href="https://www.deviantart.com/raindropmemory">Raindropmemory</a></p>
+        </footer>
     </body>
 </html>
