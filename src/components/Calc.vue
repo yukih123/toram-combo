@@ -8,13 +8,13 @@
                 <p>コンボのMPを計算するツールです。</p>
                 <p>スキルと特殊効果を選んでください。</p>
             </div>
-            <div class="form">
+            <form class="form">
                 <el-row :gutter="5" class="form_title" type="flex">
                     <el-col :span="17">スキル</el-col>
                     <el-col :span="6">特殊効果</el-col>
                 </el-row>
-                <div v-for="(row, row_index) in rows" :key="row_index" class="row">
-                    <el-row :gutter="5" align="middle" type="flex">
+                <template v-for="(row, row_index) in rows">
+                    <el-row :gutter="5" align="middle" type="flex" :key="'form-input-row-' + row_index" class="form_input_row">
                         <el-col :span="17">
                             <el-select
                                 placeholder="スキルを選択"
@@ -60,15 +60,15 @@
                             <i v-if="row.skill.name != null" class="el-icon-delete-solid" @click="deleteRow(row_index)"></i>
                         </el-col>
                     </el-row>
-                    <p>
-                        <span class="error" v-if="row.duplicate_error"><i class="el-icon-error"></i> 既に使われています</span>
+                    <p class="error" v-if="row.duplicate_error" :key="'error-' + row_index">
+                        <i class="el-icon-error"></i> 既に使われています
                     </p>
-                </div>
+                </template>
                 <ul class="result">
                     <li>消費MP <span class="point">{{ result }}</span></li>
                     <li>コンボポイント <span class="point">{{ point }}</span></li>
                 </ul>
-            </div>
+            </form>
 
             <details open>
                 <summary><i class="header-icon el-icon-info"></i> 使い方・注意事項</summary>

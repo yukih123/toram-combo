@@ -86,14 +86,22 @@ h1 {
     margin: 20px 0;
     padding: 0;
 }
-.row {
-    margin-bottom: 5px;
-}
 .form_title {
     font-size: small;
     .el-row {
         padding-left: 6px !important;
     }
+}
+.form_input_row {
+    margin-top: 6px;
+    .form_title + & {
+        margin-top: 0;
+    }
+}
+.error {
+    font-size: smaller;
+    color: $danger-color;
+    margin-top: 2px;
 }
 .result {
     margin: 20px 0 5px;
@@ -150,7 +158,6 @@ details[open] .details-content {
         overflow: auto;
     }
 }
-
 summary {
     font-size: medium;
     padding: 5px 0;
@@ -179,10 +186,6 @@ summary {
 }
 .header-icon {
     margin-right: 5px;
-}
-.error {
-    font-size: small;
-    color: $danger-color;
 }
 .tweet:before {
     content: "";
