@@ -98,6 +98,16 @@ h1 {
         margin-top: 0;
     }
 }
+.el-select {
+    width: 100%;
+    .el-input__inner {
+        padding: 0 25px 0 8px !important;
+    }
+}
+.el-select__caret.el-input__icon.el-icon-arrow-up {
+    width: 20px;
+}
+
 .error {
     font-size: smaller;
     color: $danger-color;
@@ -118,9 +128,6 @@ h1 {
 }
 .point {
     margin-left: 5px;
-}
-.el-select {
-    width: 100%;
 }
 .first-effect {
     padding-left: 2.5px;
