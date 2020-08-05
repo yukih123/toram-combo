@@ -204,14 +204,19 @@ export default {
         checkDuplication(row_index) {
             const rows = this.rows;
             const name = rows[row_index].skill.name.replace(/\(.+\)/, "");
+            rows[row_index].duplicate_error = false;
+            if (row_index == 0) {
+                return;
+            }
             for (const [index, row] of rows.entries()) {
-                if (index == row_index || row.skill.name == null) continue;
+                if (index == row_index || row.skill.name == null) {
+                    continue;
+                }
                 if (name == row.skill.name.replace(/\(.+\)/, "")) {
                     rows[row_index].duplicate_error = true;
                     return;
                 }
             }
-            rows[row_index].duplicate_error = false;
         },
         addRow() {
             if (this.rows[this.rows.length - 1].skill.name) {
@@ -219,11 +224,22 @@ export default {
             }
         },
         deleteRow(row_index) {
+            // Delete
             this.rows.splice(row_index, 1)
-            if (row_index == 0 && this.rows.length == 0) {
+            let length = this.rows.length;
+            if (row_index == 0 && length == 0) {
                 this.rows.push(Object.assign({}, this.init_row));
             }
+
+            // Reset first effect
             this.rows[0].effect = null;
+
+            // Duplication check
+            length--;
+            if (length == 0) return;
+            for (let i = 0; i < length; i++) {
+                this.checkDuplication(i);
+            }
         },
         isDisabledSkill(row_index) {
             return this.point >= 20
