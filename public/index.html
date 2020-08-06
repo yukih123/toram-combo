@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="<%= VUE_APP_DESCRIPTION %>">
+        <meta name="google-site-verification" content="4yaepXibXPQw-Gfcm4vc7DlDN8Hj2kLF_d5MW1NmKHQ">
         <link rel="icon" href="<%= BASE_URL %>favicon.ico">
         <title><%= VUE_APP_TITLE %></title>
 
@@ -25,10 +27,42 @@
         <header>
             <h1><%= VUE_APP_TITLE %></h1>
         </header>
-        <div id="app"></div>
+
+        <main>
+            <div class="tip">
+                <p>コンボのMPを計算するツールです。</p>
+                <p>スキルと特殊効果を選んでください。</p>
+            </div>
+
+            <div id="app"></div>
+
+            <details open>
+                <summary><i class="header-icon el-icon-info"></i> 使い方・注意事項</summary>
+                <ul class="details-content">
+                    <li>コンボに組み込みたいスキルと特殊効果を選択してください。選択すると次の入力欄が表示されます。</li>
+                    <li>フィナウ〆などキャンセルで終わらせたい場合は、特殊効果で〆を選んでください。</li>
+                    <li>執念の消費MPは状況によるので、必要MP全てをHPでまかなう(MP消費0)と仮定して計算しています。</li>
+                    <li>全MPを消費するスキルについては調整中です。</li>
+                </ul>
+            </details>
+            <details>
+                <summary><i class="header-icon el-icon-question"></i> お問い合わせ・不具合報告</summary>
+                <div class="details-content">
+                    <p>Twitter <a href="https://twitter.com/<%= VUE_APP_TWITTER_ACCOUNT %>" target="_blank" rel="noopener">@<%= VUE_APP_TWITTER_ACCOUNT %></a> までご連絡ください。</p>
+                    <p>特に下記の情報をいただけると大変助かります。</p>
+                    <ul>
+                        <li>起点に使えないスキル</li>
+                        <li>コンボに組み込めないスキル</li>
+                        <li>スキルレベルでMPが変わるスキル</li>
+                        <li>次のスキルMPが半減するスキル</li>
+                    </ul>
+                </div>
+            </details>
+        </main>
+
         <footer>
-            <p><a class="tweet" href="http://twitter.com/share?url=<%= VUE_APP_URL %>&text=<%= VUE_APP_TITLE %>&hashtags=トーラム" target="_blank">Twitterでシェア</a></p>
-            <p class="license">Icon by <a href="https://www.deviantart.com/raindropmemory">Raindropmemory</a></p>
+            <p><a class="tweet" href="http://twitter.com/share?url=<%= VUE_APP_URL %>&text=<%= VUE_APP_TITLE %>&hashtags=トーラム" target="_blank" rel="noopener">Twitterでシェア</a></p>
+            <p class="license">Icon by <a href="https://www.deviantart.com/raindropmemory" target="_blank" rel="noopener">Raindropmemory</a></p>
         </footer>
     </body>
 </html>

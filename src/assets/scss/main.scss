@@ -79,7 +79,10 @@ h1 {
     }
 }
 .form {
+    background-color: $background-color-form;
+    background-clip: padding-box;
     color: $font-color-form;
+    border-color: $background-color-form;
     border-width: 25px;
     border-style: solid;
     border-image: url('/images/frame2.png') fill 25 round;
