@@ -6,7 +6,7 @@
         </div>
         <form class="form">
             <el-row :gutter="5" class="form_title" type="flex">
-                <el-col :span="17">スキル</el-col>
+                <el-col :span="17"><label for="select_skill">スキル</label></el-col>
                 <el-col :span="6">特殊効果</el-col>
             </el-row>
             <template v-for="(row, row_index) in rows">
@@ -16,6 +16,7 @@
                             placeholder="スキルを選択"
                             v-model="row.skill"
                             value-key="name"
+                            :id="(row_index == 0) ? 'select_skill' : ''"
                             :disabled="isDisabledSkill(row_index)"
                             @change="change(row_index)">
                             <el-option-group
