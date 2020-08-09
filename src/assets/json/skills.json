@@ -217,7 +217,7 @@
         "name": "ウィザードスキル",
         "skills": [
 			{ "name" : "マナクリスタル",  "mp" : 0,  "can_start" : false,  "halve_next" : false },
-			{ "name" : "ライトニング",  "mp" : 0,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ライトニング",  "mp" : 0,  "can_start" : false,  "halve_next" : false },
 			{ "name" : "ブリザード",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "メテオストライク",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ストーンスキン",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
