@@ -147,7 +147,7 @@
         "skills": [
 			{ "name" : "スパイクダート",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ガトリングナイフ",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "スローイング(〜Lv9)",  "mp" : "10",  "can_start" : false,  "halve_next" : false },
+			{ "name" : "スローイング(〜Lv9)",  "mp" : 100,  "can_start" : false,  "halve_next" : false },
 			{ "name" : "スローイング(Lv10)",  "mp" : 0,  "can_start" : false,  "halve_next" : false },
 			{ "name" : "ポイズンダガー",  "mp" : 200,  "can_start" : true,  "halve_next" : false }
 		]
