@@ -3,7 +3,8 @@
         "name": "ブレードスキル",
         "skills": [
 			{ "name" : "ハードヒット",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "アステュート",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "アステュート(片手剣)",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "アステュート(両手剣)",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "トリガースラッシュ(〜Lv5)",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "トリガースラッシュ(Lv6〜)",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ランページ",  "mp" : 500,  "can_start" : true,  "halve_next" : false },
