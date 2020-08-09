@@ -115,8 +115,7 @@
 			{ "name" : "シャイニングクロス",  "mp" : 600,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ステップリアクター",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "フィロ･エクレール",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "シュツルムリーパー",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "セイバーオーラ",  "mp" : 900,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "シュツルムリーパー",  "mp" : 400,  "can_start" : true,  "halve_next" : false }
 		]
 	},
     {
