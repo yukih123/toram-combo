@@ -196,7 +196,6 @@
         "skills": [
 			{ "name" : "ブラッドバイト",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "レッドティアー",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "サクリファイス",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ダークスティンガー",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "デーモンクロウ",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "リグレット",  "mp" : 200,  "can_start" : true,  "halve_next" : false }
