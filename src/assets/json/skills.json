@@ -81,7 +81,7 @@
 			{ "name" : "ストライクスタブ",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "クロノスドライブ",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "クイックオーラ",  "mp" : 0,  "can_start" : false,  "halve_next" : false },
-			{ "name" : "迅速の捌手",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "神速の捌手",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "バスターランス",  "mp" : 100,  "can_start" : true,  "halve_next" : false }
 		]
 	},
