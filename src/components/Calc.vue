@@ -13,7 +13,7 @@
                         value-key="name"
                         :id="(row_index == 0) ? 'select_skill' : ''"
                         :disabled="isDisabledSkill(row_index)"
-                        @change="change(row_index)">
+                        @change="change()">
                         <el-option-group
                             v-for="(category, category_index) in skill_categories"
                             :key="category_index"
@@ -169,17 +169,23 @@ export default {
         },
     },
     methods: {
-        change(row_index) {
-            this.checkDuplication(row_index);
+        change() {
+            this.checkDuplicationAll();
             this.addRow();
+        },
+        checkDuplicationAll() {
+            let length = this.rows.length;
+            for (let i = 0; i < length; i++) {
+                this.checkDuplication(i);
+            }
         },
         checkDuplication(row_index) {
             const rows = this.rows;
-            const name = rows[row_index].skill.name.replace(/\(.+\)/, "");
             rows[row_index].duplicate_error = false;
-            if (row_index == 0) {
+            if (row_index == 0 || Object.keys(rows[row_index].skill).length == 0) {
                 return;
             }
+            const name = rows[row_index].skill.name.replace(/\(.+\)/, "");
             for (const [index, row] of rows.entries()) {
                 if (index == row_index || row.skill.name == null) {
                     continue;
@@ -207,11 +213,7 @@ export default {
             this.rows[0].effect = null;
 
             // Duplication check
-            length--;
-            if (length == 0) return;
-            for (let i = 0; i < length; i++) {
-                this.checkDuplication(i);
-            }
+            this.checkDuplicationAll();
         },
         isDisabledSkill(row_index) {
             return this.point >= 20
