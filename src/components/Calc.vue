@@ -112,7 +112,7 @@ export default {
 
                 // 充填なら0
                 if (row.effect == 'fill') {
-                    filled_mp += mp;
+                    filled_mp = mp;
                     mp = 0;
                     continue;
                 }
