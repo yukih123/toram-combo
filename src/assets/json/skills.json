@@ -21,18 +21,19 @@
     {
         "name": "シュートスキル",
         "skills": [
-			{ "name" : "パワーシュート",        "mp" : 100,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "ワンホイール",          "mp" : 200,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "アローレイン",          "mp" : 300,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "スナイピング",          "mp" : 400,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "クロスファイア",        "mp" : 400,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "メーバショット",        "mp" : 100,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "パライズショット",      "mp" : 300,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "スモークダスト",        "mp" : 500,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "アームブレイク",        "mp" : 700,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "ハイドアタック",        "mp" : 400,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "デコイシューター",      "mp" : 400,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "デストルクショット",    "mp" : 200,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "パワーシュート",             "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ワンホイール",               "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "アローレイン",               "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "スナイピング",               "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "クロスファイア",             "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "メーバショット",             "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "パライズショット",           "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "スモークダスト",             "mp" : 500,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "アームブレイク",             "mp" : 700,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ハイドアタック(弓・自動弓)", "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ハイドアタック",             "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "デコイシューター",           "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "デストルクショット",         "mp" : 200,  "can_start" : true,  "halve_next" : false }
 		]
 	},
     {
