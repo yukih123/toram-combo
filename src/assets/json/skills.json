@@ -90,17 +90,18 @@
     {
         "name": "モノノフスキル",
         "skills": [
-			{ "name" : "一閃",      "mp" : 100,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "波動刃",    "mp" : 100,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "三段突き",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "八相発破",  "mp" : 500,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "天流乱星",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "画竜点睛",  "mp" : 500,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "柄打ち",    "mp" : 200,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "斬釘截鉄",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "明鏡止水",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "怪力乱神",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "刃弾き",    "mp" : 100,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "一閃",              "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "波動刃",            "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "三段突き",          "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "八相発破",          "mp" : 500,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "天流乱星",          "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "天流乱星(バフ時)",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "画竜点睛",          "mp" : 500,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "柄打ち",            "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "斬釘截鉄",          "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "明鏡止水",          "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "怪力乱神",          "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "刃弾き",            "mp" : 100,  "can_start" : true,  "halve_next" : false }
 		]
 	},
     {
