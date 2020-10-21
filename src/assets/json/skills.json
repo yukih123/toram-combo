@@ -15,7 +15,10 @@
 			{ "name" : "バスターブレード",          "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ウォークライ",              "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "バーサーク",                "mp" : 500,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "ファストアタック",          "mp" : 300,  "can_start" : true,  "halve_next" : true }
+			{ "name" : "ファストアタック",          "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ファストアタック(Lv10)",    "mp" : 300,  "can_start" : true,  "halve_next" : true },
+			{ "name" : "ファストアタック(双剣)",    "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ファストアタック(双剣Lv10)","mp" : 200,  "can_start" : true,  "halve_next" : true }
 		]
 	},
     {
