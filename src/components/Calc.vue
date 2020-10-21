@@ -117,11 +117,6 @@ export default {
                     continue;
                 }
 
-                // 強打で最後なら2倍
-                if (row.effect == 'strike' && index == last_index) {
-                    mp *= 2;
-                }
-
                 // 前が半減スキルなら半減する
                 if (index != 0 && rows[index - 1].skill.halve_next) {
                     mp = Math.ceil(mp / 100 / 2) * 100;
