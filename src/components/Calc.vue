@@ -195,7 +195,6 @@ export default {
                 }
                 if (name == row.skill.name.replace(/\(.+\)/, "")) {
                     rows[row_index].errors.skill = true;
-                    console.log('rows[row_index]:', rows[row_index]);
                     return;
                 }
             }
