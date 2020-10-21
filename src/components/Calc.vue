@@ -37,7 +37,8 @@
                         v-if="row_index != 0"
                         v-model="row.effect"
                         placeholder="特殊効果を選択"
-                        :disabled="isDisabledSkill(row_index) || row_index == 0">
+                        :disabled="isDisabledSkill(row_index) || row_index == 0"
+                        @change="change()">
                         <el-option
                             v-for="(effect, key) in effects"
                             :key="key"
@@ -52,8 +53,10 @@
                     <i v-if="row.skill.name != null" class="el-icon-delete-solid" @click="deleteRow(row_index)"></i>
                 </el-col>
             </el-row>
-            <p class="error" v-if="row.duplicate_error" :key="'error-' + row_index">
-                <i class="el-icon-error"></i> 既に使われています
+            <p class="error" v-if="row.errors.skill || row.errors.strike" :key="'error-' + row_index">
+                <i class="el-icon-error"></i>
+                <template v-if="row.errors.skill">既に使われています</template>
+                <template v-else-if="row.errors.strike">強打は既に使われています</template>
             </p>
         </template>
         <ul class="result">
@@ -76,13 +79,16 @@ export default {
             init_row: {
                 skill: {},
                 effect: null,
-                duplicate_error: false,
+                errors: {
+                    skill: false,
+                    strike: false,
+                },
             },
             rows: [],
         }
     },
     mounted() {
-        this.rows.push(Object.assign({}, this.init_row));
+        this.rows.push(JSON.parse(JSON.stringify(this.init_row)));
     },
     computed: {
         env() {
@@ -115,11 +121,6 @@ export default {
                     filled_mp = mp;
                     mp = 0;
                     continue;
-                }
-
-                // 強打で最後なら2倍
-                if (row.effect == 'strike' && index == last_index) {
-                    mp *= 2;
                 }
 
                 // 前が半減スキルなら半減する
@@ -177,11 +178,13 @@ export default {
             let length = this.rows.length;
             for (let i = 0; i < length; i++) {
                 this.checkDuplication(i);
+                this.checkDuplicationStrike(i);
             }
         },
+        // スキルの重複チェック
         checkDuplication(row_index) {
             const rows = this.rows;
-            rows[row_index].duplicate_error = false;
+            rows[row_index].errors.skill = false;
             if (row_index == 0 || Object.keys(rows[row_index].skill).length == 0) {
                 return;
             }
@@ -191,14 +194,27 @@ export default {
                     continue;
                 }
                 if (name == row.skill.name.replace(/\(.+\)/, "")) {
-                    rows[row_index].duplicate_error = true;
+                    rows[row_index].errors.skill = true;
                     return;
                 }
             }
         },
+        // 強打の重複チェック
+        checkDuplicationStrike(row_index) {
+            this.rows[row_index].errors.strike = false;
+            if (this.rows[row_index].effect != 'strike'
+                || this.rows.findIndex((row) => row.effect == 'strike') == row_index // 最初のはスルー
+            ) {
+                return;
+            }
+            const strike_rows = this.rows.filter((row) => row.effect == 'strike');
+            if (strike_rows.length > 1) {
+                this.rows[row_index].errors.strike = true;
+            }
+        },
         addRow() {
             if (this.rows[this.rows.length - 1].skill.name) {
-                this.rows.push(Object.assign({}, this.init_row));
+                this.rows.push(JSON.parse(JSON.stringify(this.init_row)));
             }
         },
         deleteRow(row_index) {
@@ -206,7 +222,7 @@ export default {
             this.rows.splice(row_index, 1)
             let length = this.rows.length;
             if (row_index == 0 && length == 0) {
-                this.rows.push(Object.assign({}, this.init_row));
+                this.rows.push(JSON.parse(JSON.stringify(this.init_row)));
             }
 
             // Reset first effect
