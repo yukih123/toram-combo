@@ -15,10 +15,7 @@
 			{ "name" : "バスターブレード",          "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ウォークライ",              "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "バーサーク",                "mp" : 500,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "ファストアタック",          "mp" : 300,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "ファストアタック(Lv10)",    "mp" : 300,  "can_start" : true,  "halve_next" : true },
-			{ "name" : "ファストアタック(双剣)",    "mp" : 200,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "ファストアタック(双剣Lv10)","mp" : 200,  "can_start" : true,  "halve_next" : true }
+			{ "name" : "ファストアタック",          "mp" : 300,  "can_start" : true,  "halve_next" : true }
 		]
 	},
     {
@@ -101,7 +98,6 @@
 			{ "name" : "天流乱星(バフ時)",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "画竜点睛",          "mp" : 500,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "柄打ち",            "mp" : 200,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "禍断ち",            "mp" : 300,  "can_start" : false, "halve_next" : false },
 			{ "name" : "斬釘截鉄",          "mp" : 400,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "明鏡止水",          "mp" : 200,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "怪力乱神",          "mp" : 200,  "can_start" : true,  "halve_next" : false },
