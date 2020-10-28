@@ -127,6 +127,11 @@ export default {
                     mp = Math.ceil(mp / 100 / 2) * 100;
                 }
 
+                // 前が反射(成功)なら-100
+                if (index != 0 && rows[index - 1].effect == "reflexion_success") {
+                    mp = mp - 100;
+                }
+
                 // 連撃なら起点から数えてマイナスされる
                 if (row.effect == 'continue') {
                     mp = mp - index * 100;
