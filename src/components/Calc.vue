@@ -106,7 +106,12 @@ export default {
                 }
 
                 // 〆と執念ならなし
-                if (row.effect == 'cancel' || row.effect == 'obsess') {
+                if (row.effect == 'cancel') {
+                    // 充填されたMPも消費されない
+                    filled_mp = 0;
+                    continue;
+                }
+                if (row.effect == 'obsess') {
                     continue;
                 }
 
