@@ -195,7 +195,8 @@
 			{ "name" : "レゾナンス",            "mp" : 0,  "can_start" : false,  "halve_next" : false },
 			{ "name" : "エーテルフレア",        "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "エレメントスラッシュ",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "エンチャントソード",    "mp" : 300,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "エンチャントソード",    "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "エンチャントバースト",  "mp" : 100,  "can_start" : true,  "halve_next" : false }
 		]
 	},
     {
@@ -205,7 +206,9 @@
 			{ "name" : "レッドティアー",      "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ダークスティンガー",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "デーモンクロウ",      "mp" : 400,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "リグレット",          "mp" : 200,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "リグレット",          "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ソウルハント",        "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "エターナルナイトメア","mp" : 300,  "can_start" : true,  "halve_next" : false }
 		]
 	},
     {
