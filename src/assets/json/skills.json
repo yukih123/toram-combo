@@ -301,5 +301,31 @@
 			{ "name" : "ペットヒール",    "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ペットチャージ",  "mp" : 300,  "can_start" : true,  "halve_next" : false }
 		]
+	},
+    {
+        "name": "調整用",
+        "skills": [
+			{ "name" : "MP", "mp" : 0,    "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 500,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 600,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 700,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 800,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 900,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 1000, "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 1100, "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 1200, "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 1300, "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 1400, "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 1500, "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 1600, "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 1700, "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 1800, "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 1900, "can_start" : true,  "halve_next" : false },
+			{ "name" : "MP", "mp" : 2000, "can_start" : true,  "halve_next" : false }
+		]
 	}
 ]
