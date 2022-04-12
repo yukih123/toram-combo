@@ -195,7 +195,7 @@ export default {
         checkDuplication(row_index) {
             const rows = this.rows;
             rows[row_index].duplicate_error = false;
-            if (rows[row_index].skill.name.indexOf('MP') === 0) {
+            if (rows[row_index].skill.mp == 0) {
                 return;
             }
             if (row_index == 0 || Object.keys(rows[row_index].skill).length == 0) {
