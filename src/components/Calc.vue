@@ -171,7 +171,7 @@ export default {
                 if (row.skill.name) {
                     sum++;
                 }
-                if (row.effect && row.effect != 'none') {
+                if (row.effect && (row.effect != 'none' && row.effect != 'cancel')) {
                     sum++;
                 }
                 if (sum < 0) {
