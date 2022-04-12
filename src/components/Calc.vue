@@ -174,8 +174,11 @@ export default {
                 if (row.effect && row.effect != 'none') {
                     sum++;
                 }
+                if (sum < 0) {
+                    sum = 0;
+                }
                 return sum;
-            }, 0);
+            }, -1);
         },
     },
     methods: {
