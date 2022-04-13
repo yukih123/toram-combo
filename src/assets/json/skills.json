@@ -78,6 +78,7 @@
 			{ "name" : "チャリオット",      "mp" : 500,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ソニックウェーブ",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "アースバインド",    "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "スライディング",    "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "トライアーツ",      "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ラッシュ",          "mp" : 400,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "チャクラ",          "mp" : 200,  "can_start" : true,  "halve_next" : false },
