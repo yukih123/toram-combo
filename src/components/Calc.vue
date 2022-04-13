@@ -122,11 +122,6 @@ export default {
                     continue;
                 }
 
-                // 前が半減スキルなら半減する
-                if (index != 0 && rows[index - 1].skill.halve_next) {
-                    mp = Math.ceil(mp / 100 / 2) * 100;
-                }
-
                 // 前が反射(成功)なら-100
                 if (index != 0 && rows[index - 1].effect == "reflexion_success") {
                     mp = mp - 100;
@@ -135,6 +130,11 @@ export default {
                 // 強打で最後なら2倍
                 if (row.effect == 'strike' && index == last_index) {
                     mp *= 2;
+                }
+
+                // 前が半減スキルなら半減する
+                if (index != 0 && rows[index - 1].skill.halve_next) {
+                    mp = Math.ceil(mp / 100 / 2) * 100;
                 }
 
                 // 連撃なら起点から数えてマイナスされる
