@@ -153,7 +153,8 @@
 			{ "name" : "正拳突き",                  "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ゴリアステイクショット",    "mp" : 500,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ゴッドハンド",              "mp" : 400,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "呼吸法",                    "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "呼吸法(破壊者〜Lv9)",       "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "呼吸法(破壊者Lv10)",        "mp" : 300,  "can_start" : true,  "halve_next" : true },
 			{ "name" : "フローティングキック",      "mp" : 200,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "コンビネーション",          "mp" : 0,    "can_start" : false, "halve_next" : false }
 		]
