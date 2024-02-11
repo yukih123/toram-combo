@@ -278,12 +278,12 @@
 			{ "name" : "ディテクション",    "mp" : 300,  "can_start" : true,  "halve_next" : false },
 
 			{ "name" : "フォースアロー",    "mp" : 300,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "エクスプローシブ",  "mp" : 400,  "can_start" : true,  "halve_next" : false }
-			{ "name" : "サイクロンアロー",  "mp" : 100,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "エクスプローシブ",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "サイクロンアロー",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
 
-			{ "name" : "サテライトアロー",  "mp" : 300,  "can_start" : true,  "halve_next" : false }
-			{ "name" : "ブランクトラップ",  "mp" : 300,  "can_start" : true,  "halve_next" : false }
-			{ "name" : "バーティカルエア",  "mp" : 400,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "サテライトアロー",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ブランクトラップ",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "バーティカルエア",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "マルチプルハント",  "mp" : 200,  "can_start" : true,  "halve_next" : false }
 		]
 	},
@@ -302,7 +302,7 @@
 			{ "name" : "ホーリーバイブル",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
 
 			{ "name" : "ハイネスヒール",    "mp" : 400,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "プリエール",        "mp" : 500,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "プリエール",        "mp" : 500,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ネメシス",          "mp" : 200,  "can_start" : true,  "halve_next" : false }
 		]
 	},
@@ -318,10 +318,10 @@
 			{ "name" : "レゾナンス",            "mp" : 0,    "can_start" : false,  "halve_next" : false },
 			{ "name" : "エンチャントソード",    "mp" : 300,  "can_start" : true,  "halve_next" : false },
 
-			{ "name" : "エンチャントバースト",  "mp" : 100,  "can_start" : true,  "halve_next" : false }
-			{ "name" : "フロートダッシュ",      "mp" : 300,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "エンチャントバースト",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "フロートダッシュ",      "mp" : 300,  "can_start" : true,  "halve_next" : false },
 
-            { "name" : "デュアルブリンガー",    "mp" : 400,  "can_start" : true,  "halve_next" : false }
+            { "name" : "デュアルブリンガー",    "mp" : 400,  "can_start" : true,  "halve_next" : false },
             { "name" : "ユニオンソード",        "mp" : 500,  "can_start" : true,  "halve_next" : false }
 		]
 	},
@@ -378,7 +378,7 @@
 			{ "name" : "集気功",    "mp" : 99999,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "獅子奮迅",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "疾風怒涛",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "回復気功",  "mp" : 100,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "回復気功",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
 
 			{ "name" : "驚天動地",  "mp" : 100,  "can_start" : true,  "halve_next" : false }
 		]
