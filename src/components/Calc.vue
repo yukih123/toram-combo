@@ -115,13 +115,6 @@ export default {
                     continue;
                 }
 
-                // 充填なら0
-                if (row.effect == 'fill') {
-                    filled_mp = mp;
-                    mp = 0;
-                    continue;
-                }
-
                 // 前が反射(成功)なら-100
                 if (index != 0 && rows[index - 1].effect == "reflexion_success") {
                     mp = mp - 100;
@@ -133,8 +126,15 @@ export default {
                 }
 
                 // 前が半減スキルなら半減する
-                if (index != 0 && rows[index - 1].skill.halve_next) {
+                if (index != 0 && rows[index - 1].skill.halve_next == true) {
                     mp = Math.ceil(mp / 100 / 2) * 100;
+                }
+
+                // 充填なら0
+                if (row.effect == 'fill') {
+                    filled_mp = mp;
+                    mp = 0;
+                    continue;
                 }
 
                 // 連撃なら起点から数えてマイナスされる
