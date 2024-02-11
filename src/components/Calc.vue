@@ -126,7 +126,7 @@ export default {
                 }
 
                 // 前が半減スキルなら半減する
-                if (index != 0 && rows[index - 1].skill.halve_next == true) {
+                if (index != 0 && rows[index - 1].skill.halve_next) {
                     mp = Math.ceil(mp / 100 / 2) * 100;
                 }
 
