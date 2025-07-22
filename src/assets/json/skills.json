@@ -2,15 +2,18 @@
     {
         "name": "ブレードスキル",
         "skills": [
+			{ "name" : "ハンマーダウン",            "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ハードヒット",              "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "アステュート(片手剣)",      "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "アステュート(両手剣)",      "mp" : 200,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "アクセルブレード",          "mp" : 200,  "can_start" : true,  "halve_next" : false },
 
+			{ "name" : "クリーヴアタック",          "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "トリガースラッシュ(〜Lv5)", "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "トリガースラッシュ(Lv6〜)", "mp" : 200,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "スパイラルエアー",          "mp" : 300,  "can_start" : true,  "halve_next" : false },
 
+			{ "name" : "ストームブレイザー",        "mp" : 200,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ファストアタック",          "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ファストアタック(Lv10)",    "mp" : 300,  "can_start" : true,  "halve_next" : true },
 			{ "name" : "ファストアタック(双剣)",    "mp" : 200,  "can_start" : true,  "halve_next" : false },
@@ -19,10 +22,12 @@
 			{ "name" : "ソードテンペスト",          "mp" : 400,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ウォークライ",              "mp" : 300,  "can_start" : true,  "halve_next" : false },
 
+			{ "name" : "ガーディブレイド",          "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "メテオブレイカー",          "mp" : 600,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "バスターブレード",          "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "バーサーク",                "mp" : 500,  "can_start" : true,  "halve_next" : false },
 
+			{ "name" : "オーガスラッシュ",          "mp" : 500,  "can_start" : true,  "halve_next" : true },
 			{ "name" : "シャットアウト",            "mp" : 100,  "can_start" : true,  "halve_next" : true },
 			{ "name" : "ムーンスラッシュ",          "mp" : 400,  "can_start" : true,  "halve_next" : true },
 			{ "name" : "オーラブレード",            "mp" : 200,  "can_start" : true,  "halve_next" : true },
@@ -53,7 +58,8 @@
 			{ "name" : "ツインストーム",             "mp" : 0,    "can_start" : false, "halve_next" : false },
 			{ "name" : "コンクェスター",             "mp" : 1200, "can_start" : true,  "halve_next" : false },
 			{ "name" : "旋身番撃ち",                 "mp" : 300,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "パラボラキャノン",           "mp" : 400,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "パラボラキャノン",           "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ワイドスプレッド",           "mp" : 200,  "can_start" : true,  "halve_next" : false }
 		]
 	},
     {
@@ -80,7 +86,7 @@
 			{ "name" : "クロノスシフト",      "mp" : 200,     "can_start" : true,  "halve_next" : false },
 			{ "name" : "術式/マジックカノン", "mp" : 700,     "can_start" : true,  "halve_next" : false },
 			{ "name" : "術式/フォール",       "mp" : 400,     "can_start" : true,  "halve_next" : false },
-			{ "name" : "術式/イーゲル",       "mp" : 300,     "can_start" : true,  "halve_next" : false }
+			{ "name" : "術式結界",            "mp" : 400,     "can_start" : true,  "halve_next" : false }
 		]
 	},
     {
@@ -103,7 +109,10 @@
 
 			{ "name" : "アシュラオーラ",    "mp" : 0,    "can_start" : false, "halve_next" : false },
 			{ "name" : "フラッシュアーツ",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "化勁",              "mp" : 100,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "化勁",              "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "貼山靠",            "mp" : 500,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "震脚",              "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "旋払",              "mp" : 400,  "can_start" : true,  "halve_next" : false }
 		]
 	},
     {
@@ -112,21 +121,25 @@
 			{ "name" : "フラッシュスタブ",    "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "キャノンスピア",      "mp" : 200,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "デッドリースピア",    "mp" : 100,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "クイックオーラ",      "mp" : 0,    "can_start" : false,  "halve_next" : false },
+			{ "name" : "クイックオーラ",      "mp" : 0,    "can_start" : false, "halve_next" : false },
 
 			{ "name" : "ドラゴンテイル",      "mp" : 300,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "パニッシュレイ",      "mp" : 0,    "can_start" : false,  "halve_next" : false },
+			{ "name" : "パニッシュレイ",      "mp" : 0,    "can_start" : false, "halve_next" : false },
+			{ "name" : "逆境の雄叫び",        "mp" : 100,  "can_start" : true,  "halve_next" : false },
 
 			{ "name" : "バスターランス",      "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ダイブインパクト",    "mp" : 400,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ストライクスタブ",    "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ブリッツパイク",      "mp" : 300,  "can_start" : true,  "halve_next" : false },
 
 			{ "name" : "ドラゴントゥース",    "mp" : 500,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "クロノスドライブ",    "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ライトニングヘイル",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "神速の捌手",          "mp" : 100,  "can_start" : true,  "halve_next" : false },
 
 			{ "name" : "ドラゴニックチャージ","mp" : 300,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "ディメンジョンティル","mp" : 200,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "ディメンジョンティル","mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "トールハンマー",      "mp" : 400,  "can_start" : true,  "halve_next" : false }
 		]
 	},
     {
@@ -143,11 +156,13 @@
 			{ "name" : "刃弾き",            "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "八相発破",          "mp" : 500,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "斬釘截鉄",          "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "一陣の風",          "mp" : 300,  "can_start" : true,  "halve_next" : false },
 
 			{ "name" : "天流乱星",          "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "天流乱星(バフ時)",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "画竜点睛",          "mp" : 500,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "怪力乱神",          "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "颯",                "mp" : 400,  "can_start" : true,  "halve_next" : false },
 
 			{ "name" : "霞雪月花",          "mp" : 500,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "無影斬",            "mp" : 300,  "can_start" : true,  "halve_next" : false }
@@ -172,11 +187,14 @@
 			{ "name" : "シャイニングクロス",    "mp" : 600,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "シュツルムリーパー",    "mp" : 400,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "セイバーオーラ",        "mp" : 900,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "エリアルスレイ",        "mp" : 300,  "can_start" : true,  "halve_next" : false },
 
 			{ "name" : "エアスライサー",        "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ルーナディザスター",    "mp" : 200,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ツインバスターブレード","mp" : 300,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "アークセイバー",        "mp" : 200,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "アークセイバー",        "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ホライゾナルカット",    "mp" : 600,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ブレイドスティンガー",        "mp" : 100,  "can_start" : true,  "halve_next" : false }
 		]
 	},
     {
@@ -208,7 +226,7 @@
             { "name" : "エンハンス",            "mp" : 400,  "can_start" : true,  "halve_next" : false },
             { "name" : "アストラルランス",      "mp" : 500,  "can_start" : true,  "halve_next" : false },
 
-
+            { "name" : "リザレクション",        "mp" : 2000, "can_start" : true,  "halve_next" : false },
             { "name" : "スタビリス",            "mp" : 700,  "can_start" : true,  "halve_next" : false },
             { "name" : "スプライトシールド",    "mp" : 0,    "can_start" : false, "halve_next" : false },
             { "name" : "マジックバルカン",      "mp" : 0,    "can_start" : false, "halve_next" : false }
@@ -263,7 +281,10 @@
 			{ "name" : "バインドストライク",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ルヴニール",          "mp" : 400,  "can_start" : true,  "halve_next" : false },
 
-			{ "name" : "ファーレス",          "mp" : 500,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "ファーレス",          "mp" : 500,  "can_start" : true,  "halve_next" : false },
+
+			{ "name" : "ブリンクソード",      "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ナイトプレッジ",      "mp" : 500,  "can_start" : true,  "halve_next" : false }
 		]
 	},
     {
@@ -284,7 +305,10 @@
 			{ "name" : "サテライトアロー",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ブランクトラップ",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "バーティカルエア",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "マルチプルハント",  "mp" : 200,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "マルチプルハント",  "mp" : 200,  "can_start" : true,  "halve_next" : false },
+
+			{ "name" : "フォーカス",        "mp" : 600,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "カムフラージュ",    "mp" : 400,  "can_start" : true,  "halve_next" : false }
 		]
 	},
     {
@@ -303,7 +327,9 @@
 
 			{ "name" : "ハイネスヒール",    "mp" : 400,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "プリエール",        "mp" : 500,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "ネメシス",          "mp" : 200,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "ネメシス",          "mp" : 200,  "can_start" : true,  "halve_next" : false },
+
+			{ "name" : "ホーリーグレイス",  "mp" : 500,  "can_start" : true,  "halve_next" : false }
 		]
 	},
     {
@@ -346,18 +372,24 @@
         "skills": [
 			{ "name" : "アサシンスタブ",    "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "イベーション",      "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ベノムインジェクト","mp" : 100,  "can_start" : true,  "halve_next" : false },
 
 			{ "name" : "バックステップ",    "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "シエラム",          "mp" : 300,  "can_start" : true,  "halve_next" : false },
 
-			{ "name" : "フューネヴィンデ",  "mp" : 99999,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "フューネヴィンデ",  "mp" : 99999,"can_start" : true,  "halve_next" : false },
+			{ "name" : "ベノムスナッチ",    "mp" : 200,  "can_start" : true,  "halve_next" : false },
 
-			{ "name" : "シャドウウォーク",  "mp" : 100,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "シャドウウォーク",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "デスリセプション",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+
+			{ "name" : "アサルトチェイス",  "mp" : 800,  "can_start" : true,  "halve_next" : false }
 		]
 	},
     {
         "name": "ウィザードスキル",
         "skills": [
+			{ "name" : "ファミリア",        "mp" : 300,  "can_start" : false,  "halve_next" : false },
 			{ "name" : "マナクリスタル",    "mp" : 0,    "can_start" : false,  "halve_next" : false },
 
 			{ "name" : "ライトニング",      "mp" : 0,    "can_start" : false,  "halve_next" : false },
@@ -369,7 +401,9 @@
 			{ "name" : "オーバーリミット",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
 
 			{ "name" : "インペリアルレイ",  "mp" : 400,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "ハイファミリア",    "mp" : 300,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "ハイファミリア",    "mp" : 300,  "can_start" : true,  "halve_next" : false },
+
+			{ "name" : "シフト",            "mp" : 200,  "can_start" : true,  "halve_next" : false }
 		]
 	},
     {
@@ -384,9 +418,36 @@
 		]
 	},
     {
+        "name": "パルチザンスキル",
+        "skills": [
+			{ "name" : "Lブーメラン",        "mp" : 200,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ヒーリングショット", "mp" : 0,    "can_start" : false, "halve_next" : false },
+			{ "name" : "前線維持",           "mp" : 100,  "can_start" : true,  "halve_next" : false },
+
+			{ "name" : "LブーメランⅡ",      "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "矢研ぎ",             "mp" : 100,  "can_start" : true,  "halve_next" : false },
+
+			{ "name" : "LブーメランⅢ",      "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "Nドラゴントゥース",  "mp" : 500,  "can_start" : true,  "halve_next" : false }
+		]
+	},
+    {
         "name": "サポートスキル",
         "skills": [
+			{ "name" : "ぷちヒール",        "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ライフリカバリー",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "マナリチャージ",    "mp" : 300,  "can_start" : true,  "halve_next" : false },
+
+			{ "name" : "リカバリー",        "mp" : 100,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ブレイブオーラ",    "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "マジックバリア",    "mp" : 400,  "can_start" : true,  "halve_next" : false },
+
 			{ "name" : "サンクチュアリ",    "mp" : 400,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ハイサイクル",      "mp" : 500,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "ディジートシール",  "mp" : 500,  "can_start" : true,  "halve_next" : false },
+
+			{ "name" : "ヒール",            "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "クイックモーション","mp" : 600,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "ハイリアクション",  "mp" : 600,  "can_start" : true,  "halve_next" : false }
 		]
 	},
@@ -395,10 +456,12 @@
         "skills": [
 			{ "name" : "妖精の舞",    "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "激情の舞",    "mp" : 200,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "鋭敏な舞",    "mp" : 500,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "魅惑の舞",    "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "応援の舞",    "mp" : 300,  "can_start" : true,  "halve_next" : false },
+
+			{ "name" : "鋭敏な舞",    "mp" : 500,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "優雅な構え",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+
+			{ "name" : "魅惑の舞",    "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "花鳥風月",    "mp" : 400,  "can_start" : true,  "halve_next" : false }
 		]
 	},
@@ -407,11 +470,13 @@
         "skills": [
 			{ "name" : "癒しの歌",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "妖精の歌",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "熱情の歌",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "智解の歌",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
 			{ "name" : "生命の歌",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+
 			{ "name" : "夢幻の歌",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
-			{ "name" : "アドリブ",  "mp" : 100,  "can_start" : true,  "halve_next" : false }
+			{ "name" : "アドリブ",  "mp" : 100,  "can_start" : true,  "halve_next" : false },
+
+			{ "name" : "熱情の歌",  "mp" : 300,  "can_start" : true,  "halve_next" : false },
+			{ "name" : "智解の歌",  "mp" : 300,  "can_start" : true,  "halve_next" : false }
 		]
 	},
     {
